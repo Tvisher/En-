@@ -1,5 +1,37 @@
 @@include('./html/header.html')
 
-<main> </main>
+<main>
+    <section class="slider-section">
+        <div class="container">
+            <div class="slider-section__wrapper">
+                <!-- Slider main container -->
+                <div class="swiper main-slider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide main-slider__slide slide-item">
+                            <div class="slide-item__content">
+                                <a href="#" class="category-nameplane">Социальная ответственность</a>
+                                <h2 class="slide-item__title">Класс с «вау-эффектом»</h2>
+                                <p class="slide-item__descr">E n + на базе иркутской школы № 64 открыла первый центр развития компетенций — « мультилаб ». Эта уникальная образовательная площадка станет для школьников центром обучения , развития и общения .</p>
+                                <div class="slide-item__footer"></div>
+                            </div>
+                            <div class="slide-item__iamge">
+                                <img src="@img/main-slide-img.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-slider__navigation">
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 @@include('./html/footer.html')
