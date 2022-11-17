@@ -1,0 +1,31 @@
+// Size
+$mainFontSize: 16px;
+$mainFontWeight: 300;
+$mainLineHeight: 140%;
+
+$desktopWidth: 1678px;
+$smDesktopWidth: 980px;
+$tableWidth: 768px;
+$phoneWidth: 480px;
+$smPhoneWidth: 380px;
+
+// Main color
+$brand-black: #202020;
+$brand-gray: #8a8a8a;
+$brand-orange: #f7931d;
+
+// Font
+$mainFont: "Formular";
+$mainFontColor: $brand-black;
+
+@mixin pruning($c) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: $c;
+  -webkit-box-orient: vertical;
+  line-clamp: $c;
+  box-orient: vertical;
+}
