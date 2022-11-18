@@ -17,7 +17,11 @@
 const mainSlider = new Swiper('.main-slider', {
     slidesPerView: 1,
     spaceBetween: 60,
+    loop: true,
     speed: 1200,
+    autoplay: {
+        delay: 5000,
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -27,4 +31,14 @@ const mainSlider = new Swiper('.main-slider', {
         type: 'bullets',
         clickable: true,
     },
+});
+
+// Категории
+const newsSectionNavSlider = new Swiper('.news-section__nav-slider', {
+    slidesPerView: 'auto',
+    navigation: {
+        nextEl: '.swiper-button-next.nav-slider',
+        prevEl: '.swiper-button-prev.nav-slider',
+    },
+
 });
