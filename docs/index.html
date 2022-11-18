@@ -241,12 +241,18 @@
                         // Слайдер категорий
                         const newsSectionNavSlider = new Swiper('.news-section__nav-slider', {
                             slidesPerView: 'auto',
+                            EdgeSwipeDetection: 1,
+                            longSwipesRatio: 1,
+                            freeMode: {
+                                enabled: true,
+                                sticky: false,
+                            },
                             navigation: {
                                 nextEl: '.swiper-button-next.nav-slider',
                                 prevEl: '.swiper-button-prev.nav-slider',
                             },
                             on: {
-                                slideChangeTransitionEnd(slider) {
+                                transitionEnd(slider) {
                                     console.log(slider.isEnd);
                                 },
                                 click(slider, event) {
