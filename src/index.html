@@ -114,13 +114,27 @@
                             <div class="swiper-slide category-item">Экономика</div>
                             <div class="swiper-slide category-item">Люди компании</div>
                         </div>
-                        <!-- <div class="swiper-scrollbar nav-slider"></div> -->
                     </div>
                     <div class="swiper-button-next nav-slider">
                         <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L5 5L1 9" stroke="#F7931D" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
+                    <script>
+                        // Категории
+                        const newsSectionNavSlider = new Swiper('.news-section__nav-slider', {
+                            slidesPerView: 'auto',
+                            navigation: {
+                                nextEl: '.swiper-button-next.nav-slider',
+                                prevEl: '.swiper-button-prev.nav-slider',
+                            },
+                            on: {
+                                click(swiper, event) {
+                                    console.log(event.target);
+                                }
+                            },
+                        });
+                    </script>
                 </div>
                 <a href="#" class="news-section__more"></a>
             </div>

@@ -33,12 +33,3 @@ const mainSlider = new Swiper('.main-slider', {
     },
 });
 
-// Категории
-const newsSectionNavSlider = new Swiper('.news-section__nav-slider', {
-    slidesPerView: 'auto',
-    navigation: {
-        nextEl: '.swiper-button-next.nav-slider',
-        prevEl: '.swiper-button-prev.nav-slider',
-    },
-
-});
