@@ -16,6 +16,10 @@
   &:active {
     transform: translateY(2px);
   }
+  &.ghost-orange {
+    border-color: $brand-orange;
+    color: $brand-orange;
+  }
 }
 
 button {
