@@ -18,9 +18,13 @@ const mainSlider = new Swiper('.main-slider', {
     slidesPerView: 1,
     spaceBetween: 60,
     loop: true,
-    speed: 1200,
+    speed: 800,
     autoplay: {
         delay: 5000,
+    },
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
     },
     navigation: {
         nextEl: '.swiper-button-next',
