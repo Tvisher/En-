@@ -1279,6 +1279,15 @@ button {
   font-size: 40px;
   line-height: 160%;
   margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
 }
 
 .main-slider .slide-item__descr {
@@ -1314,24 +1323,79 @@ button {
   margin-top: auto;
 }
 
-.slide-item__footer {
+.main-slider .slide-item__footer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.slide-item__footer .btn {
+.main-slider .slide-item__footer .btn {
   margin-left: auto;
 }
 
-.slide-item__footer .gray-selection {
+.main-slider .slide-item__footer .gray-selection {
   margin-right: 10px;
 }
 
-.slide-item__footer .orange-selection {
+.main-slider .slide-item__footer .orange-selection {
   margin-left: 20px;
   margin-right: 10px;
+}
+
+.main-slider .main-slider__navigation {
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-slider .main-slider__navigation .swiper-button-prev:after,
+.main-slider .main-slider__navigation .swiper-rtl .swiper-button-next:after,
+.main-slider .main-slider__navigation .swiper-button-next:after,
+.main-slider .main-slider__navigation .swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+
+.main-slider .swiper-button-prev.cube,
+.main-slider .swiper-button-next.cube {
+  margin: 0;
+  position: static;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(247, 147, 29, 0.6);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-slider .swiper-button-prev.cube {
+  padding-right: 3px;
+}
+
+.main-slider .swiper-button-next.cube {
+  padding-left: 3px;
+}
+
+.main-slider .swiper-pagination.lines {
+  position: static;
+}
+
+.main-slider .swiper-pagination.lines .swiper-pagination-bullet {
+  border-radius: 0;
+  transition: background-color 0.3s ease-in-out;
+  width: 30px;
+  height: 2px;
+  background: #c5c5c5;
+  opacity: 1;
+}
+
+.main-slider .swiper-pagination.lines .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #f7931d;
 }
 
 @media screen and (max-width: 768px) {

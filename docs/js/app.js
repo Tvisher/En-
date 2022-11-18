@@ -1,4 +1,5 @@
-// Проверка поддержки WebP
+
+// Проверка поддержки WebP браузером
 (async function testWebP() {
     const hasWebP = await new Promise(res => {
         const webP = new Image();
@@ -11,3 +12,19 @@
     document.documentElement.classList.add(className);
 })();
 
+
+
+const mainSlider = new Swiper('.main-slider', {
+    slidesPerView: 1,
+    spaceBetween: 60,
+    speed: 1200,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+});
