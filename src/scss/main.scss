@@ -417,7 +417,8 @@ li {
     cursor: pointer;
     width: fit-content;
     color: $brand-gray;
-    &.swiper-slide-active {
+    transition: color 0.25s ease-in-out;
+    &.active {
       color: $brand-black;
     }
     &:hover::before {

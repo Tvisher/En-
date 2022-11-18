@@ -219,7 +219,7 @@
                     </div>
                     <div class="news-section__nav-slider">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide category-item">Все категории</div>
+                            <div class="swiper-slide category-item active">Все категории</div>
                             <div class="swiper-slide category-item">Новости производства</div>
                             <div class="swiper-slide category-item">Бизнес-система</div>
                             <div class="swiper-slide category-item">Экономика</div>
@@ -238,7 +238,7 @@
                         </svg>
                     </div>
                     <script>
-                        // Категории
+                        // Слайдер категорий
                         const newsSectionNavSlider = new Swiper('.news-section__nav-slider', {
                             slidesPerView: 'auto',
                             navigation: {
@@ -246,8 +246,17 @@
                                 prevEl: '.swiper-button-prev.nav-slider',
                             },
                             on: {
-                                click(swiper, event) {
-                                    console.log(event.target);
+                                slideChangeTransitionEnd(slider) {
+                                    console.log(slider.isEnd);
+                                },
+                                click(slider, event) {
+                                    const clickedSlide = event.target.closest('.category-item');
+                                    if (clickedSlide) {
+                                        document.querySelector('.category-item.active')?.classList.remove('active');
+                                        clickedSlide.classList.add('active');
+                                        const slideIndex = slider.slides.indexOf(clickedSlide);
+                                        slider.slideTo(slideIndex, 800);
+                                    }
                                 }
                             },
                         });

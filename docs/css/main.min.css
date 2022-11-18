@@ -1451,6 +1451,7 @@ button {
   cursor: pointer;
   width: fit-content;
   color: #8a8a8a;
+  transition: color 0.25s ease-in-out;
 }
 
 .news-section .category-item:not(:last-child) {
@@ -1469,7 +1470,7 @@ button {
   transition: opacity 0.25s ease-in-out;
 }
 
-.news-section .category-item.swiper-slide-active {
+.news-section .category-item.active {
   color: #202020;
 }
 
