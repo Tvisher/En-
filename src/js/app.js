@@ -13,7 +13,7 @@
 })();
 
 
-
+// Первый слайдер на главной странице 
 const mainSlider = new Swiper('.main-slider', {
     slidesPerView: 1,
     spaceBetween: 60,

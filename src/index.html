@@ -151,17 +151,17 @@
                     </div>
                     <div class="news-section__nav-slider">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide category-item active">Все категории</div>
-                            <div class="swiper-slide category-item">Новости производства</div>
-                            <div class="swiper-slide category-item">Бизнес-система</div>
-                            <div class="swiper-slide category-item">Экономика</div>
-                            <div class="swiper-slide category-item">Люди компании</div>
-                            <div class="swiper-slide category-item">Социальная ответственность</div>
-                            <div class="swiper-slide category-item">Все категории</div>
-                            <div class="swiper-slide category-item">Новости производства</div>
-                            <div class="swiper-slide category-item">Бизнес-система</div>
-                            <div class="swiper-slide category-item">Экономика</div>
-                            <div class="swiper-slide category-item">Люди компании</div>
+                            <div class="swiper-slide category-item active" data-caregory-id="1">Все категории</div>
+                            <div class="swiper-slide category-item" data-caregory-id="2">Новости производства</div>
+                            <div class="swiper-slide category-item" data-caregory-id="3">Бизнес-система</div>
+                            <div class="swiper-slide category-item" data-caregory-id="4">Экономика</div>
+                            <div class="swiper-slide category-item" data-caregory-id="5">Люди компании</div>
+                            <div class="swiper-slide category-item" data-caregory-id="6">Социальная ответственность</div>
+                            <div class="swiper-slide category-item" data-caregory-id="7">Все категории</div>
+                            <div class="swiper-slide category-item" data-caregory-id="8">Новости производства</div>
+                            <div class="swiper-slide category-item" data-caregory-id="9">Бизнес-система</div>
+                            <div class="swiper-slide category-item" data-caregory-id="10">Экономика</div>
+                            <div class="swiper-slide category-item" data-caregory-id="11">Люди компании</div>
                         </div>
                     </div>
                     <div class="swiper-button-next nav-slider">
@@ -547,7 +547,9 @@
                             clickedSlide.classList.add('active');
                             const slideIndex = slider.slides.indexOf(clickedSlide);
                             slider.slideTo(slideIndex, 800);
-
+                            // Id слайда
+                            const caregoryId = clickedSlide.getAttribute('data-caregory-id');
+                            console.log(caregoryId);
                             //Место для аякс запроса за слайдами из выбранной категории
                         }
                     }
@@ -627,6 +629,7 @@
         </div>
     </section>
     <section class="industry-events">
+        <div class="industry-events__bg"></div>
         <div class="container">
             <div class="title-wrapper">
                 <h2 class="section-title">События отрасли</h2>
