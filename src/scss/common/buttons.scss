@@ -20,6 +20,11 @@
     border-color: $brand-orange;
     color: $brand-orange;
   }
+  &.fill-orange {
+    background: linear-gradient(90deg, #f7931d 0%, #ff5c00 100%);
+    color: #fff;
+    border: none;
+  }
 }
 
 button {
