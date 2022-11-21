@@ -2196,6 +2196,11 @@ button {
   justify-content: center;
 }
 
+.swiper-button-prev.cube:after,
+.swiper-button-next.cube:after {
+  display: none;
+}
+
 .swiper-button-prev.cube {
   padding-right: 3px;
 }
@@ -2989,25 +2994,53 @@ button {
   margin-bottom: 40px;
 }
 
+.archive-section .swiper-button-prev,
+.archive-section .swiper-button-next {
+  position: absolute;
+  top: 50%;
+}
+
+.archive-section .swiper-button-prev {
+  transform: translateX(20px);
+}
+
+.archive-section .swiper-button-next {
+  transform: translateX(-20px);
+}
+
 .archive-section__slider {
+  position: relative;
   margin: auto;
   overflow: hidden;
   width: calc(100% - 174px);
 }
 
+.archive-section__slider .swiper-scrollbar {
+  height: 2px;
+  position: static;
+  width: calc(100% - 390px);
+  margin-left: auto;
+  margin-top: -24%;
+}
+
 .archive-section__slide {
+  margin-right: 41px;
   width: 240px;
   height: 560px;
-  transition: width 0.6s ease-in-out;
+  transition: width 0.4s ease-in-out;
   padding-bottom: 30px;
 }
 
-.archive-section__slide:hover .slide-item__before {
+.archive-section__slide:last-child {
+  margin-right: 291px;
+}
+
+.archive-section__slide .slide-item__link:hover .slide-item__before {
   opacity: 1;
 }
 
 .archive-section__slide .slide-item__image {
-  transition: height 0.6s ease-in-out;
+  transition: height 0.4s ease-in-out;
   margin-bottom: 10px;
   height: 350px;
   width: 100%;
@@ -3062,6 +3095,54 @@ button {
 
 .archive-section__slide.swiper-slide-active .slide-item__image {
   height: 510px;
+}
+
+.footer {
+  background: #eeeeee;
+  padding: 40px 0;
+}
+
+.footer__wrapper .socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.footer__wrapper .socials__item {
+  background-color: #666666;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.footer__wrapper .text-wrap {
+  display: flex;
+  gap: 40px;
+  color: #8a8a8a;
+}
+
+.footer__wrapper .text-wrap a {
+  display: inline;
+  color: #f7931d;
+  text-decoration: underline;
+}
+
+.footer__start,
+.footer__end {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__start .btn,
+.footer__end .btn {
+  border-color: #d9d9d9;
+  color: #202020;
+}
+
+.footer__start {
+  margin-bottom: 64px;
 }
 
 @media all and (min-width: 1024px) {

@@ -63,36 +63,39 @@ const mediaSlider = new Swiper('.media-section__slider', {
 });
 
 
+
 // Слайдеры секции Archive на главной странице
 const archiveSlider = new Swiper('.archive-section__slider', {
     slidesPerView: 'auto',
-    speed: 600,
-    spaceBetween: 37,
-    // virtualTranslate: true,
+    speed: 400,
+    // spaceBetween: 41,
+    // init: false,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },
     on: {
-        // transitionEnd(slider) {
-        //     console.log(slider.realIndex);
-        //     slider.updateSize();
-        //     slider.updateSlides();
-        // },
-        slideChangeTransitionEnd(slider) {
-            slider.updateSize();
+        transitionEnd(slider) {
             slider.updateSlides();
-            console.log('slideChangeTransitionEnd');
             slider.slideTo(slider.realIndex);
+            const lastSlide = slider.slides[slider.slides.length - 1];
 
+            console.log(lastSlide.getBoundingClientRect());
         },
         resize(slider) {
             slider.updateSlides();
             slider.updateSize();
-        }
+        },
     }
-
 });
+
+setTimeout(() => {
+    // archiveSlider.init();
+}, 700);
 
 document.addEventListener('click', (e) => {
     const target = e.target;
