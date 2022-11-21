@@ -886,3 +886,159 @@ li {
   color: $brand-gray;
   margin-bottom: 15px;
 }
+
+.media-section {
+  padding-top: 70px;
+  padding-bottom: 50px;
+  background: #202020;
+  overflow: hidden;
+  .section-title {
+    color: #fff;
+  }
+}
+
+.media-section__slider {
+  display: none;
+  overflow: hidden;
+  &.show {
+    display: block;
+    animation: fromOpacity 0.8s ease-in-out forwards;
+  }
+}
+
+@keyframes fromOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.media-section__slide {
+  .slide-image {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    height: 397px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .slide-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #fff;
+  }
+  &:hover {
+    .slide-hover {
+      opacity: 1;
+      &::before {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+  .category-nameplane {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    svg path {
+      fill: #fff;
+    }
+  }
+}
+
+.slide-hover {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(32, 32, 32, 0.4),
+    rgba(32, 32, 32, 0.4)
+  );
+  &::before {
+    transition: width 0.2s ease-in-out 0.08s, height 0.2s ease-in-out 0.08s;
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &._video::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='51' height='51' viewBox='0 0 51 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M32.7511 23.8725C33.8678 24.6702 33.8678 26.3298 32.7511 27.1275L23.4125 33.7979C22.0887 34.7434 20.25 33.7972 20.25 32.1704L20.25 18.8296C20.25 17.2028 22.0887 16.2566 23.4125 17.2021L32.7511 23.8725Z' stroke='white' stroke-width='2'/%3e%3crect x='1.5' y='1.5' width='48' height='48' rx='9' stroke='white' stroke-opacity='0.4' stroke-width='2'/%3e%3c/svg%3e ");
+  }
+  &._photo::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='15' viewBox='0 0 20 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.62233 7.54299C2.53485 9.03239 3.74652 10.489 5.13339 11.5959C6.64674 12.8037 8.31503 13.5542 10 13.5542C11.685 13.5542 13.3532 12.8037 14.8666 11.5959C16.2535 10.489 17.4651 9.03238 18.3777 7.54298C17.2756 6.05806 16.1196 4.58514 14.7996 3.45013C13.3787 2.22827 11.8222 1.44578 10 1.44578C8.17785 1.44578 6.62138 2.22828 5.20042 3.45015C3.88047 4.58517 2.72444 6.05808 1.62233 7.54299ZM4.22101 2.36539C5.80753 1.00115 7.69831 0 10 0C12.3017 0 14.1925 1.00113 15.779 2.36536C17.3543 3.71989 18.6827 5.47905 19.8607 7.07802C20.0288 7.30619 20.0461 7.60876 19.9052 7.85382C18.8968 9.6071 17.4821 11.3761 15.8045 12.715C14.1303 14.0512 12.1404 15 10 15C7.85956 15 5.8697 14.0512 4.19552 12.715C2.51784 11.3761 1.10313 9.6071 0.0947883 7.85381C-0.0461518 7.60875 -0.0287863 7.30618 0.139315 7.07801C1.3173 5.47907 2.64577 3.71992 4.22101 2.36539ZM6.48148 7.5C6.48148 5.63468 8.08438 4.17053 10 4.17053C11.9156 4.17053 13.5185 5.63468 13.5185 7.5C13.5185 9.36532 11.9156 10.8295 10 10.8295C8.08438 10.8295 6.48148 9.36532 6.48148 7.5ZM10 5.61631C8.84728 5.61631 7.96296 6.48609 7.96296 7.5C7.96296 8.51391 8.84728 9.38369 10 9.38369C11.1527 9.38369 12.037 8.51391 12.037 7.5C12.037 6.48609 11.1527 5.61631 10 5.61631Z' fill='white'/%3e%3c/svg%3e ");
+  }
+}
+
+.media-section__head {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  .title-wrapper {
+    margin-bottom: 0;
+  }
+}
+.media-section__slider-toggle {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 50vw;
+    height: 2px;
+    background-color: #8a8a8a;
+  }
+  margin-right: 25%;
+  display: flex;
+  gap: 20px;
+  .toggle__btn {
+    cursor: pointer;
+    position: relative;
+    &:before {
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+    }
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #8a8a8a;
+    &.active {
+      color: #fff;
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}

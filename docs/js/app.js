@@ -37,3 +37,38 @@ const mainSlider = new Swiper('.main-slider', {
     },
 });
 
+
+
+// Первый слайдер на главной странице 
+const mediaSlider = new Swiper('.media-section__slider', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    speed: 800,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+});
+
+document.addEventListener('click', (e) => {
+    const target = e.target;
+
+    // Выбор слайдера в секии медиа
+    const targetBtn = target.closest('[data-toggle-slider]');
+    if (targetBtn) {
+        const tatargetBtnId = targetBtn.getAttribute('data-toggle-slider');
+        const activeBtn = document.querySelector('[data-toggle-slider].active');
+        if (activeBtn) activeBtn.classList.remove('active');
+        targetBtn.classList.add('active');
+        const activeSlider = document.querySelector('[data-slider-id].show');
+        if (activeSlider) activeSlider.classList.remove('show');
+        const selectedSlider = document.querySelector(`[data-slider-id="${tatargetBtnId}"]`);
+        if (selectedSlider) selectedSlider.classList.add('show');
+    }
+});
+
