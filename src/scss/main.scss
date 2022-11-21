@@ -1071,12 +1071,10 @@ li {
   margin: auto;
   overflow: hidden;
   width: calc(100% - 174px);
-  .swiper-wrapper {
-    // transition-delay: 0.6s !important;
-  }
 }
 
 .archive-section__slide {
+  width: 240px;
   height: 560px;
   transition: width 0.6s ease-in-out;
   &:hover {
@@ -1085,7 +1083,6 @@ li {
     }
   }
   padding-bottom: 30px;
-  width: 16.5% !important;
 
   .slide-item__image {
     transition: height 0.6s ease-in-out;
@@ -1136,8 +1133,8 @@ li {
     padding: 10px 0;
     color: $brand-black;
   }
-  &.custom-active {
-    width: 24% !important;
+  &.swiper-slide-active {
+    width: 350px !important;
     .slide-item__image {
       height: 510px;
     }
