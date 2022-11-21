@@ -2268,19 +2268,19 @@ button {
   padding-bottom: 12px;
 }
 
-.news-section .news-section__nav-slider.end::after {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.news-section .news-section__nav-slider .swiper-wrapper::before {
+.news-section .news-section__nav-slider::before {
   position: absolute;
   bottom: -12px;
-  left: 0px;
-  right: 0px;
+  left: 40px;
+  right: 40px;
   content: "";
   height: 2px;
   background-color: #d9d9d9;
+}
+
+.news-section .news-section__nav-slider.end::after {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .news-section .news-section__nav-slider::after {
