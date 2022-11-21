@@ -62,6 +62,32 @@ const mediaSlider = new Swiper('.media-section__slider', {
     },
 });
 
+
+// Слайдеры секции Archive на главной странице
+const archiveSlider = new Swiper('.archive-section__slider', {
+    slidesPerView: 'auto',
+    speed: 1200,
+    spaceBetween: 40,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    on: {
+        activeIndexChange(slider) {
+            setTimeout(() => {
+                slider.updateSize();
+                slider.updateSlides();
+                slider.slideTo(slider.realIndex, 800);
+            }, 900);
+        },
+        resize(slider) {
+            slider.updateSlides();
+            slider.updateSize();
+        }
+    }
+
+});
+
 document.addEventListener('click', (e) => {
     const target = e.target;
 
