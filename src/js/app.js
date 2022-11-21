@@ -13,6 +13,13 @@
 })();
 
 
+
+//Инит Fancybox
+Fancybox.bind("[data-fancybox]", {
+    hideScrollbar: false,
+    placeFocusBack: false,
+});
+
 // Первый слайдер на главной странице 
 const mainSlider = new Swiper('.main-slider', {
     slidesPerView: 1,
@@ -39,7 +46,7 @@ const mainSlider = new Swiper('.main-slider', {
 
 
 
-// Первый слайдер на главной странице 
+// Слайдеры секции Media на главной странице
 const mediaSlider = new Swiper('.media-section__slider', {
     slidesPerView: 4,
     spaceBetween: 20,
