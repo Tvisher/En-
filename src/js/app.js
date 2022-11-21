@@ -67,18 +67,22 @@ const mediaSlider = new Swiper('.media-section__slider', {
 const archiveSlider = new Swiper('.archive-section__slider', {
     slidesPerView: 'auto',
     speed: 1200,
-    spaceBetween: 40,
+    spaceBetween: 37,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     on: {
-        activeIndexChange(slider) {
+        transitionEnd(slider) {
+            const activeSlide = slider.slides[slider.realIndex];
+            // slider.$el[0].querySelector('.swiper-slide.custom-active').classList.remove('custom-active');
+            activeSlide && activeSlide.classList.add('custom-active');
             setTimeout(() => {
+
+                slider.slideTo(slider.realIndex);
                 slider.updateSize();
                 slider.updateSlides();
-                slider.slideTo(slider.realIndex, 800);
-            }, 900);
+            }, 601);
         },
         resize(slider) {
             slider.updateSlides();
