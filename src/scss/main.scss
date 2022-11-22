@@ -466,7 +466,7 @@ li {
   .news-section__nav-slider {
     &::before {
       position: absolute;
-      bottom: -12px;
+      bottom: 0;
       left: 40px;
       right: 40px;
       content: "";
