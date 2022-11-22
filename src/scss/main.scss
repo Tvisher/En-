@@ -1150,12 +1150,9 @@ li {
 
 .archive-section__slide {
   margin-right: 40px;
-  &:last-child {
-    margin-right: 280px;
-  }
   width: 240px;
   height: 560px;
-  transition: width 0.4s ease-in-out;
+  transition: width 0.35s ease-in-out;
   .slide-item__link:hover {
     .slide-item__before {
       opacity: 1;
@@ -1164,7 +1161,7 @@ li {
   padding-bottom: 30px;
 
   .slide-item__image {
-    transition: height 0.4s ease-in-out;
+    transition: height 0.35s ease-in-out;
     margin-bottom: 10px;
     height: 350px;
     width: 100%;
@@ -1211,6 +1208,7 @@ li {
     line-height: 160%;
     padding: 10px 0;
     color: $brand-black;
+    @include pruning(2);
   }
   &.swiper-slide-active {
     width: 350px !important;
@@ -1346,7 +1344,7 @@ li {
 
 .categoryes-body {
   padding-bottom: 100px;
-  padding-top: 70px;
+  padding-top: 50px;
   .show-more-btn {
     padding: 20px 30px;
     align-items: center;
@@ -1505,7 +1503,8 @@ li {
   border: 2px solid #d9d9d9 !important;
   border-top: none !important;
   padding-top: 10px;
-  width: 320px !important;
+  max-width: 320px !important;
+  width: 100%;
   border-radius: 0 0 10px 10px;
   .select2-results__option--selectable {
     padding: 0 28px;
@@ -1524,7 +1523,7 @@ li {
 }
 
 .select2-container {
-  width: fit-content !important;
+  width: auto !important;
 }
 .sort-dropdown {
   font-weight: 500;
@@ -1573,4 +1572,8 @@ li {
     background-color: #fff !important;
     color: $brand-orange !important;
   }
+}
+
+.select2-results__options {
+  padding-bottom: 20px;
 }

@@ -67,7 +67,9 @@ const mediaSlider = new Swiper('.media-section__slider', {
 // Слайдеры секции Archive на главной странице
 const archiveSlider = new Swiper('.archive-section__slider', {
     slidesPerView: 'auto',
-    speed: 400,
+    speed: 1200,
+    longSwipes: false,
+    slidesOffsetAfter: 240,
     navigation: {
         nextEl: '.swiper-button-next.btn-archive',
         prevEl: '.swiper-button-prev.btn-archive',
@@ -77,9 +79,18 @@ const archiveSlider = new Swiper('.archive-section__slider', {
         draggable: true,
     },
     on: {
+
+        transitionStart(slider) {
+            slider.allowSlideNext = false;
+            slider.allowSlidePrev = false;
+            setTimeout(() => {
+                slider.updateSlides();
+                slider.slideTo(slider.realIndex, 400);
+            }, 400);
+        },
         transitionEnd(slider) {
-            slider.updateSlides();
-            slider.slideTo(slider.realIndex);
+            slider.allowSlideNext = true;
+            slider.allowSlidePrev = true;
         },
         resize(slider) {
             slider.updateSlides();
@@ -120,8 +131,6 @@ $(document).ready(function () {
     $('.categoryes-filter-select').on('select2:select', function (e) {
         $($(this).data('select2').$container).addClass('option-selected')
     });
-
-
 
     $('.sort-dropdown-select').select2({
         minimumResultsForSearch: -1,
