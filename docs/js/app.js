@@ -44,8 +44,6 @@ const mainSlider = new Swiper('.main-slider', {
     },
 });
 
-
-
 // Слайдеры секции Media на главной странице
 const mediaSlider = new Swiper('.media-section__slider', {
     slidesPerView: 4,
@@ -62,12 +60,10 @@ const mediaSlider = new Swiper('.media-section__slider', {
     },
 });
 
-
-
 // Слайдеры секции Archive на главной странице
 const archiveSlider = new Swiper('.archive-section__slider', {
     slidesPerView: 'auto',
-    speed: 1200,
+    speed: 1000,
     longSwipes: false,
     slidesOffsetAfter: 240,
     navigation: {
@@ -79,13 +75,12 @@ const archiveSlider = new Swiper('.archive-section__slider', {
         draggable: true,
     },
     on: {
-
         transitionStart(slider) {
             slider.allowSlideNext = false;
             slider.allowSlidePrev = false;
             setTimeout(() => {
                 slider.updateSlides();
-                slider.slideTo(slider.realIndex, 400);
+                slider.slideTo(slider.realIndex, 300);
             }, 400);
         },
         transitionEnd(slider) {
@@ -99,13 +94,8 @@ const archiveSlider = new Swiper('.archive-section__slider', {
     }
 });
 
-setTimeout(() => {
-    // archiveSlider.init();
-}, 700);
-
 document.addEventListener('click', (e) => {
     const target = e.target;
-
     // Выбор слайдера в секии медиа
     const targetBtn = target.closest('[data-toggle-slider]');
     if (targetBtn) {
@@ -119,8 +109,6 @@ document.addEventListener('click', (e) => {
         if (selectedSlider) selectedSlider.classList.add('show');
     }
 });
-
-
 
 $(document).ready(function () {
     $('.categoryes-filter-select').select2({
