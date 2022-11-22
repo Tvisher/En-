@@ -68,11 +68,9 @@ const mediaSlider = new Swiper('.media-section__slider', {
 const archiveSlider = new Swiper('.archive-section__slider', {
     slidesPerView: 'auto',
     speed: 400,
-    // spaceBetween: 41,
-    // init: false,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next.btn-archive',
+        prevEl: '.swiper-button-prev.btn-archive',
     },
     scrollbar: {
         el: '.swiper-scrollbar',
@@ -82,9 +80,6 @@ const archiveSlider = new Swiper('.archive-section__slider', {
         transitionEnd(slider) {
             slider.updateSlides();
             slider.slideTo(slider.realIndex);
-            const lastSlide = slider.slides[slider.slides.length - 1];
-
-            console.log(lastSlide.getBoundingClientRect());
         },
         resize(slider) {
             slider.updateSlides();
@@ -114,3 +109,24 @@ document.addEventListener('click', (e) => {
     }
 });
 
+
+
+$(document).ready(function () {
+    $('.categoryes-filter-select').select2({
+        minimumResultsForSearch: -1,
+        selectionCssClass: "dropdown-select",
+        dropdownCssClass: "dropdown-select-result",
+    });
+    $('.categoryes-filter-select').on('select2:select', function (e) {
+        $($(this).data('select2').$container).addClass('option-selected')
+    });
+
+
+
+    $('.sort-dropdown-select').select2({
+        minimumResultsForSearch: -1,
+        dropdownAutoWidth: false,
+        selectionCssClass: "sort-dropdown-select-wrapper",
+        dropdownCssClass: "sort-dropdown-select-result",
+    });
+});
