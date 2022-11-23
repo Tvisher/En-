@@ -83,8 +83,10 @@ const archiveSlider = new Swiper('.archive-section__slider', {
             }, 400);
         },
         transitionEnd(slider) {
-            slider.allowSlideNext = true;
-            slider.allowSlidePrev = true;
+            setTimeout(() => {
+                slider.allowSlideNext = true;
+                slider.allowSlidePrev = true;
+            }, 10);
         },
         resize(slider) {
             slider.updateSlides();
@@ -97,7 +99,6 @@ const archiveSlider = new Swiper('.archive-section__slider', {
 const articleSmallSlider = new Swiper('.article__small-slider', {
     slidesPerView: 'auto',
     spaceBetween: 20,
-    // loop: true,
     speed: 600,
     navigation: {
         nextEl: '.swiper-button-next',
