@@ -3962,6 +3962,19 @@ button {
   object-fit: cover;
 }
 
+.categoryes-head__screen .screen__image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1260' height='540' viewBox='0 0 1260 540' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_1569_3470)'%3e%3cpath d='M1239.46 105.359L935 644L1155.54 644L1460 105L1239.46 105.359Z' fill='url(%23paint0_linear_1569_3470)'/%3e%3cpath d='M288.633 565.454L752 -253L416.367 -253L-47 566L288.633 565.454Z' fill='url(%23paint1_linear_1569_3470)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='paint0_linear_1569_3470' x1='1197.5' y1='644' x2='1197.5' y2='105' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23F7931D'/%3e%3cstop offset='1' stop-color='%23F75E1D' stop-opacity='0'/%3e%3c/linearGradient%3e%3clinearGradient id='paint1_linear_1569_3470' x1='352.5' y1='-253' x2='352.5' y2='566' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23F7931D'/%3e%3cstop offset='1' stop-color='%23F72A1D' stop-opacity='0'/%3e%3c/linearGradient%3e%3cclipPath id='clip0_1569_3470'%3e%3crect width='1260' height='540' rx='10' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .categoryes-head__screen .screen__content {
   position: absolute;
   left: 0;
