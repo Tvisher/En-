@@ -64,7 +64,6 @@ const mediaSlider = new Swiper('.media-section__slider', {
 const archiveSlider = new Swiper('.archive-section__slider', {
     slidesPerView: 'auto',
     speed: 1000,
-    longSwipes: false,
     slidesOffsetAfter: 240,
     navigation: {
         nextEl: '.swiper-button-next.btn-archive',
