@@ -94,6 +94,23 @@ const archiveSlider = new Swiper('.archive-section__slider', {
     }
 });
 
+// Слайдеры малый на странице новости
+const articleSmallSlider = new Swiper('.article__small-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    // loop: true,
+    speed: 600,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+});
+
 document.addEventListener('click', (e) => {
     const target = e.target;
     // Выбор слайдера в секии медиа

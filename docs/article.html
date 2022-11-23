@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En+</title>
+    <link rel="preload" href="./fonts/Formular-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Formular-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Formular-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Formular-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <script> </script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container large">
+            <div class="header__wrapper">
+                <a href="index.html" class="header__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__nav-menu">
+                        <li class="list-item">
+                            <a class="nav-menu__link width-dropdown" href="#">
+                                <span>Рубрики</span>
+                                <div class="arrow">
+                                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 1L5 5L1 1" stroke="#F7931D" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-item"><a class="nav-menu__link" href="#">События отрасли</a></li>
+                        <li class="list-item"><a class="nav-menu__link" href="#">Опросы</a></li>
+                        <li class="list-item"><a class="nav-menu__link" href="#">Медиа</a></li>
+                        <li class="list-item"><a class="nav-menu__link" href="#">Конкурсы</a></li>
+                        <li class="list-item"><a class="nav-menu__link" href="#">Корпоративное ТВ</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="header__search">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M29.6133 27.8417L22.1824 20.4034C23.9406 18.2466 25.0004 15.5017 25.0004 12.5055C25.0004 5.61246 19.3951 0 12.4971 0C5.5992 0 0 5.61246 0 12.5055C0 19.3985 5.60533 25.0049 12.5033 25.0049C15.4928 25.0049 18.2434 23.9449 20.3997 22.1864L27.8306 29.6186C28.3391 30.1271 29.111 30.1271 29.6194 29.6186C30.1279 29.11 30.1279 28.3503 29.6133 27.8417ZM2.4933 12.5055C2.4933 6.98494 6.97756 2.49987 12.4971 2.49987C18.0167 2.49987 22.5071 6.99107 22.5071 12.5116C22.5071 18.0322 18.0167 22.5234 12.4971 22.5234C6.97756 22.5234 2.4933 18.026 2.4933 12.5055Z" fill="#8A8A8A" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="categories__menu">
+        <div class="container large">
+            <ul class="categories__menu-list">
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Новости производства</span>
+                        <span class="count">32</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Бизнес система</span>
+                        <span class="count">14</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Экономика</span>
+                        <span class="count">21</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Люди компании</span>
+                        <span class="count">11</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Социальная ответственность</span>
+                        <span class="count">8</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Я рекомендую</span>
+                        <span class="count">4</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Учебное время</span>
+                        <span class="count">6</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Энергетика в искусстве</span>
+                        <span class="count">9</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Энергофакты</span>
+                        <span class="count">8</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Фотофакты</span>
+                        <span class="count">13</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<main>
+    <section class="article">
+        <div class="container">
+            <div class="article__large-wrapper">
+                <div class="article__col btn-col">
+                    <a href="#" class="back-btn btn">
+                        <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L2 5L6 1" stroke="#202020" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <span>
+                            Рубрики
+                        </span>
+                    </a>
+                </div>
+                <div class="article__col image-col">
+                    <div class="article__image-wrapper">
+                        <img src="img/article-slide-1.jpg" alt="">
+                        <div class="image-wrapper__content">
+                            <a href="#" class="category-nameplane">Новости производства</a>
+                        </div>
+                    </div>
+                    <ul class="article__tags">
+                        <li class="article__tag">
+                            <a href="">#производство</a>
+                        </li>
+                        <li class="article__tag">
+                            <a href="">#бизнес-система</a>
+                        </li>
+                        <li class="article__tag">
+                            <a href="">#новости</a>
+                        </li>
+                        <li class="article__tag">
+                            <a href="">#технологии</a>
+                        </li>
+                        <li class="article__tag">
+                            <a href="">#событияотрасли</a>
+                        </li>
+                        <li class="article__tag">
+                            <a href="">#россия</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="article__col nameplate-col">
+                    <span class="cursive-text">
+                        Власти все ближе к тому, чтобы
+                        формализовать майнинг криптовалют
+                    </span>
+                </div>
+            </div>
+            <div class="article__combo-wrapper">
+                <div class="article__col btn-col">
+                </div>
+                <div class="article__col wide-col">
+                    <div class="atricle__small-wrapper">
+                        <div class="wide-col__wrapper">
+                            <div class="date-block">
+                                <div class="date-block__title">9 октября 2022</div>
+                                <div class="date-block__info">
+                                    № 38 (181)<br>
+                                    Октябрь 2022
+                                </div>
+                            </div>
+                            <div class="vertical-wrapper">
+                                <h1 class="article-tilte">
+                                    Майнерам здесь не место
+                                </h1>
+                                <span class="article-descr">
+                                    В Госдуме предлагают запретить майнинг в энергодефицитных регионах, а развивать там, где есть избыток электроэнергии.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="wide-col__wrapper">
+                            <div class="float-contaeiner">
+                                <div class="text-container">
+                                    <p>
+                                        Банк России и Минфин согласовали позицию по регулированию майнинга криптовалют,
+                                        соответствующий законопроект будет внесен в Госдуму
+                                        в ближайшее время. Основные
+                                        спорные вопросы в сфере регулирования майнинга
+                                        касаются порядка налогообложения, финансовых требований к дата-центрам и к операторам
+                                        майнинга Также вызывают
+                                        споры способы обмена добытой
+                                        в результате майнинга криптовалюты на рубли и легализация
+                                        этого процесса. Тем не менее премьер-министр Михаил
+                                        Мишустин поручил к 19 декабря
+                                        профильным ведомствам и Центробанку согласовать позицию
+                                        по законодательному регулированию майнинга криптовалют. Банк России и Минфин согласовали позицию по регулированию майнинга криптовалют,
+                                        соответствующий законопроект будет внесен в Госдуму
+                                        в ближайшее время. Основные
+                                        спорные вопросы в сфере регулирования майнинга
+                                        касаются порядка
+                                    <div class="float-contaeiner__block">
+                                        <div class="float-contaeiner__block-img">
+                                            <img src="img/category-slide-4.jpg" alt="">
+                                        </div>
+                                        <div class="float-contaeiner__block-desc">О сложных вещах Сергей Пехотин старается рассказывать доступно</div>
+                                    </div>
+                                    налогообложения, финансовых требований к дата-центрам и к операторам
+                                    майнинга Также вызывают
+                                    споры способы обмена добытой
+                                    в результате майнинга криптовалюты на рубли и легализация
+                                    этого процесса. Тем не менее премьер-министр Михаил
+                                    Мишустин поручил к 19 декабря
+                                    профильным ведомствам и Центробанку согласовать позицию
+                                    по законодательному регулированию майнинга криптовалют. Банк России и Минфин согласовали позицию по регулированию майнинга криптовалют,
+                                    соответствующий законопроект будет внесен в Госдуму
+                                    в ближайшее время. Основные
+                                    спорные вопросы в сфере регулирования майнинга
+                                    касаются порядка налогообложения, финансовых требований к дата-центрам и к операторам
+                                    майнинга Также вызывают
+                                    споры способы обмена добытой
+                                    в результате майнинга криптовалюты на рубли и легализация
+                                    этого процесса. Тем не менее премьер-министр Михаил
+                                    Мишустин поручил к 19 декабря профильным ведомствам и Центробанку согласовать позицию
+                                    по законодательному регулированию майнинга
+                                    профильным ведомствам и Центробанку согласовать позицию
+                                    по законодательному регулированию майнинга криптовалют. Банк России и Минфин согласовали позицию по регулированию майнинга криптовалют,
+                                    соответствующий законопроект будет внесен в Госдуму
+                                    в ближайшее время. Основные
+                                    спорные вопросы в сфере регулирования. Тем не менее премьер-министр Михаил
+                                    Мишустин поручил к 19 декабря
+                                    профильным ведомствам и Центробанку согласовать позицию
+                                    по законодательному регулированию майнинга криптовалют. Банк России и Минфин согласовали позицию по регулированию майнинга криптовалют,
+                                    соответствующий законопроект будет внесен в Госдуму
+                                    в ближайшее время.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="narrow-col">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id impedit facere incidunt numquam eum tenetur explicabo magni officiis similique. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id impedit facere incidunt numquam eum tenetur explicabo magni officiis similique. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id impedit facere incidunt numquam eum tenetur explicabo magni officiis similique. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id impedit facere incidunt numquam eum tenetur explicabo magni officiis similique.
+                    </div>
+                </div>
+            </div>
+            <div class="article__combo-wrapper">
+                <div class="article__col btn-col">
+                </div>
+                <div class="article__col wide-col">
+                    <div class="atricle__small-wrapper">
+                        <div class="wide-col__wrapper">
+                            <div class="vertical-wrapper">
+                                <div class="img-ban-container">
+                                    <img src="img/diagram.jpg" alt="">
+                                </div>
+                                <div class="text-container">
+                                    Банк России и Минфин согласовали позицию по регулированию майнинга криптовалют,
+                                    соответствующий законопроект будет внесен в Госдуму
+                                    в ближайшее время. Основные
+                                    спорные вопросы в сфере регулирования майнинга
+                                    касаются порядка налогообложения, финансовых требований к дата-центрам и к операторам
+                                    майнинга Также вызывают
+                                    споры способы обмена добытой
+                                    в результате майнинга криптовалюты на рубли и легализация
+                                    этого процесса. Тем не менее премьер-министр Михаил
+                                    Мишустин поручил к 19 декабря
+                                    профильным ведомствам и Центробанку согласовать позицию
+                                    по законодательному регулированию майнинга криптовалют. Банк России и Минфин согласовали позицию по регулированию майнинга криптовалют,
+                                    соответствующий законопроект будет внесен в Госдуму
+                                    в ближайшее время. Основные
+                                    спорные вопросы в сфере регулирования
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="narrow-col">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id impedit facere incidunt numquam eum tenetur explicabo magni officiis similique. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id impedit facere incidunt numquam eum tenetur explicabo magni officiis similique. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id impedit facere incidunt numquam eum tenetur explicabo magni officiis similique. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id impedit facere incidunt numquam eum tenetur explicabo magni officiis similique.
+                    </div>
+                </div>
+            </div>
+            <div class="article__combo-wrapper">
+                <div class="article__col btn-col">
+                </div>
+                <div class="article__col wide-col">
+                    <div class="atricle__small-wrapper">
+                        <div class="wide-col__wrapper">
+                            <div class="article__small-slider-container">
+                                <div class="slider-descr">Своевременная и качественная подготовка к ОЗП</div>
+                                <div class="offset-wraper">
+                                    <div class="article__small-slider">
+                                        <div class="swiper-wrapper">
+                                            <a href="img/evetn-img-1.jpg" data-fancybox="small-galery" class=" swiper-slide image-container">
+                                                <div class="slide-hover _photo"></div>
+                                                <img src="img/evetn-img-1.jpg" alt="">
+                                            </a>
+                                            <a href="img/evetn-img-1.jpg" data-fancybox="small-galery" class=" swiper-slide image-container">
+                                                <div class="slide-hover _photo"></div>
+                                                <img src="img/evetn-img-1.jpg" alt="">
+                                            </a>
+                                            <a href="img/evetn-img-1.jpg" data-fancybox="small-galery" class=" swiper-slide image-container">
+                                                <div class="slide-hover _photo"></div>
+                                                <img src="img/evetn-img-1.jpg" alt="">
+                                            </a>
+                                            <a href="img/evetn-img-1.jpg" data-fancybox="small-galery" class=" swiper-slide image-container">
+                                                <div class="slide-hover _photo"></div>
+                                                <img src="img/evetn-img-1.jpg" alt="">
+                                            </a>
+                                            <a href="img/evetn-img-1.jpg" data-fancybox="small-galery" class=" swiper-slide image-container">
+                                                <div class="slide-hover _photo"></div>
+                                                <img src="img/evetn-img-1.jpg" alt="">
+                                            </a>
+                                            <a href="img/evetn-img-1.jpg" data-fancybox="small-galery" class=" swiper-slide image-container">
+                                                <div class="slide-hover _photo"></div>
+                                                <img src="img/evetn-img-1.jpg" alt="">
+                                            </a>
+                                            <a href="img/evetn-img-1.jpg" data-fancybox="small-galery" class=" swiper-slide image-container">
+                                                <div class="slide-hover _photo"></div>
+                                                <img src="img/evetn-img-1.jpg" alt="">
+                                            </a>
+                                            <a href="img/evetn-img-1.jpg" data-fancybox="small-galery" class=" swiper-slide image-container">
+                                                <div class="slide-hover _photo"></div>
+                                                <img src="img/evetn-img-1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!-- navigation buttons -->
+                                        <div class="swiper-button-prev cube">
+                                            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 9L2 5L6 1" stroke="#F7931D" stroke-width="2" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <!-- pagination -->
+                                        <div class="swiper-button-next cube">
+                                            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1L5 5L1 9" stroke="#F7931D" stroke-width="2" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="slider-bottom__navigation">
+                                            <div class="swiper-pagination lines"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            Банк России и Минфин согласовали позицию по регулированию майнинга криптовалют,
+                            соответствующий законопроект будет внесен в Госдуму
+                            в ближайшее время. Основные
+                            спорные вопросы в сфере регулирования майнинга
+                            касаются порядка налогообложения, финансовых требований к дата-центрам и к операторам
+                            майнинга Также вызывают
+                            споры способы обмена добытой
+                            в результате майнинга криптовалюты на рубли и легализация
+                            этого процесса.
+                        </div>
+                    </div>
+                    <div class="narrow-col">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__start">
+                <a href="#" class="btn">Связаться с редакцией</a>
+                <div class="socials">
+                    <a href="#" class="socials__item"></a>
+                    <a href="#" class="socials__item"></a>
+                    <a href="#" class="socials__item"></a>
+                    <a href="#" class="socials__item"></a>
+                    <a href="#" class="socials__item"></a>
+                </div>
+            </div>
+            <div class="footer__end">
+                <div class="text-wrap">
+                    <span>Политика конфиденциальности</span>
+                    <span>Номер регистрации СМИ</span>
+                </div>
+                <div class="text-wrap">
+                    <span>Copyright © 2022 IPJSC EN+ GROUP</span>
+                    <span>Сделано в <a href="#">МедиаЛайн</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+<script src="./js/fancybox.umd.js"></script>
+<script src="./js/app.js"></script>
+
+</html>
