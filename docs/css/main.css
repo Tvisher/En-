@@ -4525,7 +4525,7 @@ button {
 .article__small-slider .swiper-button-prev,
 .article__small-slider .swiper-button-next {
   top: 50%;
-  transform: translateY(-100%);
+  transform: translateY(-80%);
   position: absolute;
   z-index: 2;
 }
