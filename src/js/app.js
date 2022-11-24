@@ -95,7 +95,7 @@ const archiveSlider = new Swiper('.archive-section__slider', {
     }
 });
 
-// Слайдеры малый на странице новости
+// Слайдер малый на странице новости
 const articleSmallSlider = new Swiper('.article__small-slider', {
     slidesPerView: 'auto',
     spaceBetween: 20,
@@ -111,7 +111,7 @@ const articleSmallSlider = new Swiper('.article__small-slider', {
     },
 });
 
-// Слайдеры малый на странице новости
+// Слайдер крупный на странице новости
 const articleLargeSlider = new Swiper('.article__large-slider', {
     slidesPerView: 'auto',
     spaceBetween: 20,
@@ -160,3 +160,10 @@ $(document).ready(function () {
         dropdownCssClass: "sort-dropdown-select-result",
     });
 });
+
+
+const airDatepicker = new AirDatepicker('.datapicker-input', {
+    isMobile: true,
+    autoClose: true,
+    dateFormat: 'dd MMMM yyyy',
+})
