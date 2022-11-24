@@ -2939,6 +2939,7 @@ button {
 
 .swiper-button-prev.cube,
 .swiper-button-next.cube {
+  flex-shrink: 0;
   margin: 0;
   position: static;
   width: 40px;
@@ -4904,6 +4905,7 @@ button {
 }
 
 .article__body::before {
+  z-index: -1;
   content: "";
   width: 433px;
   height: 637px;

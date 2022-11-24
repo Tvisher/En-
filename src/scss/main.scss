@@ -400,6 +400,7 @@ li {
 
 .swiper-button-prev.cube,
 .swiper-button-next.cube {
+  flex-shrink: 0;
   margin: 0;
   &:after {
     display: none;
@@ -2167,6 +2168,7 @@ li {
 .article__body {
   position: relative;
   &::before {
+    z-index: -1;
     content: "";
     width: 433px;
     height: 637px;
