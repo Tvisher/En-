@@ -111,6 +111,22 @@ const articleSmallSlider = new Swiper('.article__small-slider', {
     },
 });
 
+// Слайдеры малый на странице новости
+const articleLargeSlider = new Swiper('.article__large-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    speed: 600,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+});
+
 document.addEventListener('click', (e) => {
     const target = e.target;
     // Выбор слайдера в секии медиа
