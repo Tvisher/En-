@@ -3039,7 +3039,6 @@ button {
   bottom: 0px;
   background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0.7) 70%, rgb(255, 255, 255) 100%);
   z-index: 2;
-  background-clip: text;
   width: 120px;
   opacity: 1;
   visibility: visible;
@@ -3237,7 +3236,7 @@ button {
   position: relative;
 }
 
-.section-surveys .survey {
+.survey {
   padding-bottom: 130px;
   position: relative;
   z-index: 3;
@@ -3245,18 +3244,18 @@ button {
   width: 50%;
 }
 
-.section-surveys .survey .btn {
+.survey .btn {
   margin-top: 40px;
 }
 
-.section-surveys .survey__title {
+.survey__title {
   font-weight: 500;
   font-size: 24px;
   line-height: 160%;
   margin-bottom: 40px;
 }
 
-.section-surveys .survey__item {
+.survey__item {
   margin-bottom: 20px;
   font-weight: 400;
   font-size: 18px;
@@ -3266,7 +3265,7 @@ button {
   position: relative;
 }
 
-.section-surveys .survey__item .survey__input {
+.survey__item .survey__input {
   position: absolute;
   left: 0;
   top: 0;
@@ -3276,13 +3275,13 @@ button {
   visibility: hidden;
 }
 
-.section-surveys .survey__text {
+.survey__text {
   cursor: pointer;
   display: flex;
   gap: 21px;
 }
 
-.section-surveys .survey__text:before {
+.survey__text:before {
   margin-top: 10px;
   flex-shrink: 0;
   width: 10px;
@@ -3292,17 +3291,17 @@ button {
   display: block;
 }
 
-.section-surveys .survey__input:checked + .survey__text:before {
+.survey__input:checked + .survey__text:before {
   background-color: #f7931d;
   border-color: #f7931d;
 }
 
-.section-surveys .survey__wrapper {
+.survey__wrapper {
   max-width: 650px;
   position: relative;
 }
 
-.section-surveys .survey__wrapper::after {
+.survey__wrapper::after {
   position: absolute;
   content: "";
   top: 20px;
@@ -3313,7 +3312,7 @@ button {
   height: 2px;
 }
 
-.section-surveys .survey__wrapper:before {
+.survey__wrapper:before {
   content: "";
   position: absolute;
   left: -60px;
@@ -4123,6 +4122,7 @@ button {
 }
 
 .categoryes-body__list .slide-item__footer {
+  flex-wrap: wrap;
   display: flex;
   justify-content: flex-start;
   gap: 20px;
@@ -4450,8 +4450,11 @@ button {
 }
 
 .narrow-col {
+  display: flex;
+  flex-direction: column;
   flex: 0 0 34%;
   padding-left: 60px;
+  padding-right: 60px;
 }
 
 .article-tilte {
@@ -4827,6 +4830,7 @@ button {
 }
 
 .article__footer {
+  padding-bottom: 20px;
   gap: 20px;
   display: flex;
   align-items: center;
@@ -4875,6 +4879,54 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.article__wrapper {
+  border-bottom: 2px solid #d9d9d9;
+  padding-bottom: 40px;
+}
+
+.narrow-col__container {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.narrow-col__container .slider-descr {
+  margin-bottom: 0;
+}
+
+.narrow-col__container .image-block {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 253px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.narrow-col__container .image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.narrow-col__container .survey {
+  border-left: 2px solid #d9d9d9;
+  width: 100%;
+  padding: 0;
+  padding-left: 40px;
+}
+
+.narrow-col__container .survey::before {
+  display: none;
+}
+
+.narrow-col__container .survey__title {
+  font-size: 18px;
+}
+
+.narrow-col__container .survey__wrapper:before,
+.narrow-col__container .survey__wrapper::after {
+  display: none;
 }
 
 @media all and (min-width: 1024px) {
