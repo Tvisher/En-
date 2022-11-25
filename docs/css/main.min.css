@@ -4857,16 +4857,7 @@ button {
   color: #fff;
 }
 
-.categoryes-body {
-  padding-bottom: 100px;
-  padding-top: 50px;
-}
-
-.categoryes-body.search-res {
-  padding-top: 20px;
-}
-
-.categoryes-body .show-more-btn {
+.show-more-btn {
   padding: 20px 30px;
   align-items: center;
   gap: 10px;
@@ -4877,8 +4868,17 @@ button {
   margin-top: 40px;
 }
 
-.categoryes-body .show-more-btn svg {
+.show-more-btn svg {
   margin-top: 5px;
+}
+
+.categoryes-body {
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+
+.categoryes-body.search-res {
+  padding-top: 20px;
 }
 
 .categoryes-body__list {
@@ -5895,6 +5895,7 @@ button {
 }
 
 .search-head {
+  overflow: hidden;
   position: relative;
   padding-top: 90px;
 }
@@ -6048,6 +6049,172 @@ button {
 .air-datepicker-cell.-selected-:hover {
   background-color: #f7931d !important;
   color: #fff !important;
+}
+
+.toggle-btns-wrapper {
+  position: relative;
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.toggle-btns-wrapper::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #d9d9d9;
+  width: 100vw;
+}
+
+.toggle-btns-wrapper .toggle__btn {
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  color: #8a8a8a;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.toggle-btns-wrapper .toggle__btn::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  background-color: transparent;
+  width: 100%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.toggle-btns-wrapper .toggle__btn.active {
+  color: #202020;
+}
+
+.toggle-btns-wrapper .toggle__btn.active::before {
+  background-color: #202020;
+}
+
+.toggle-content-wrapper {
+  padding-bottom: 100px;
+}
+
+.contests-list {
+  flex-wrap: wrap;
+  padding-top: 20px;
+  display: flex;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.contests-list .list-item {
+  padding: 20px 10px;
+  width: 33.333%;
+}
+
+.contests-list .list-item__wrapper {
+  position: relative;
+  height: 330px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.contests-list .list-item__wrapper:hover .list-item__btn {
+  opacity: 1;
+}
+
+.contests-list .list-item__wrapper:hover .list-item__image::before {
+  opacity: 0;
+}
+
+.contests-list .list-item__wrapper:hover .list-item__image::after {
+  opacity: 1;
+}
+
+.contests-list .list-item__image {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contests-list .list-item__image::before,
+.contests-list .list-item__image::after {
+  transition: opacity 0.25s ease-in-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contests-list .list-item__image:before {
+  background: linear-gradient(180deg, rgba(32, 32, 32, 0.7) 0%, rgba(32, 32, 32, 0) 100%);
+}
+
+.contests-list .list-item__image::after {
+  background: linear-gradient(360deg, rgba(72, 13, 0, 0.8) 0%, rgba(0, 86, 78, 0.8) 100%);
+  opacity: 0;
+}
+
+.contests-list .list-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contests-list .list-item__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contests-list .list-item__footer {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.contests-list .list-item__footer .list-item__btn {
+  transition: opacity 0.2s ease-in-out;
+  margin-left: auto;
+  color: #fff;
+  opacity: 0;
+}
+
+.contests-list .show-counter {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  width: fit-content;
+  color: #fff;
+  background-color: #046b61;
+}
+
+.contests-list .list-item__name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.toggle-content-item {
+  display: none;
+}
+
+.toggle-content-item.show {
+  display: block;
+  animation: fromOpacity 0.3s ease-in-out forwards;
 }
 
 @media all and (min-width: 1024px) {

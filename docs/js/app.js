@@ -130,15 +130,15 @@ const articleLargeSlider = new Swiper('.article__large-slider', {
 document.addEventListener('click', (e) => {
     const target = e.target;
     // Выбор слайдера в секии медиа
-    const targetBtn = target.closest('[data-toggle-slider]');
+    const targetBtn = target.closest('[data-toggle-btn]');
     if (targetBtn) {
-        const tatargetBtnId = targetBtn.getAttribute('data-toggle-slider');
-        const activeBtn = document.querySelector('[data-toggle-slider].active');
+        const tatargetBtnId = targetBtn.getAttribute('data-toggle-btn');
+        const activeBtn = document.querySelector('[data-toggle-btn].active');
         if (activeBtn) activeBtn.classList.remove('active');
         targetBtn.classList.add('active');
-        const activeSlider = document.querySelector('[data-slider-id].show');
+        const activeSlider = document.querySelector('[data-toggle-id].show');
         if (activeSlider) activeSlider.classList.remove('show');
-        const selectedSlider = document.querySelector(`[data-slider-id="${tatargetBtnId}"]`);
+        const selectedSlider = document.querySelector(`[data-toggle-id="${tatargetBtnId}"]`);
         if (selectedSlider) selectedSlider.classList.add('show');
     }
 });
