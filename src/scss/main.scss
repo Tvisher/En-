@@ -2416,6 +2416,10 @@ li {
 }
 
 .wide-picture__wrapper {
+  &.has-border {
+    height: 330px;
+    border-radius: 10px;
+  }
   height: 300px;
   width: 100%;
   overflow: hidden;
@@ -2609,5 +2613,121 @@ li {
   &.show {
     display: block;
     animation: fromOpacity 0.3s ease-in-out forwards;
+  }
+}
+
+.current-contest-section {
+  overflow: hidden;
+  padding-top: 60px;
+  .large-title {
+    margin-bottom: 40px;
+  }
+  .toggle-btns-wrapper {
+    gap: 30px;
+    margin-bottom: 0px;
+  }
+}
+
+.members-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  margin-left: -20px;
+  .list-item {
+    width: 25%;
+    padding: 20px;
+  }
+  .list-item__image {
+    position: relative;
+    height: 270px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        360deg,
+        rgba(72, 13, 0, 0.8) 0%,
+        rgba(0, 86, 78, 0.8) 100%
+      );
+    }
+  }
+  .list-item__btn {
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    color: #fff;
+    z-index: 1;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    width: 80%;
+  }
+  .list-item__wrapper {
+    position: relative;
+    &:hover {
+      .list-item__image::before {
+        opacity: 1;
+      }
+      .list-item__btn {
+        opacity: 1;
+      }
+    }
+  }
+  .list-item__footer {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .list-item__auth {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .auth__photo {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .auth__name {
+    font-weight: 500;
+    font-size: 18px;
+    color: $brand-black;
+  }
+  .orange-selection {
+    width: fit-content;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+}
+
+.toggle-content {
+  padding-top: 20px;
+  padding-bottom: 80px;
+  display: none;
+  &.show {
+    animation: fromOpacity 0.3s ease-in-out forwards;
+    display: block;
   }
 }
