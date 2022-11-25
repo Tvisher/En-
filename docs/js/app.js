@@ -80,7 +80,7 @@ const archiveSlider = new Swiper('.archive-section__slider', {
             setTimeout(() => {
                 slider.updateSlides();
                 slider.slideTo(slider.realIndex, 300);
-            }, 400);
+            }, 390);
         },
         transitionEnd(slider) {
             setTimeout(() => {
@@ -164,6 +164,7 @@ $(document).ready(function () {
     $('.categoryes-filter-select').one('select2:open', function (e) {
         $('input.select2-search__field').prop('placeholder', 'Поиск');
     });
+
 
     $('.sort-dropdown-select').select2({
         minimumResultsForSearch: -1,

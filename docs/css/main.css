@@ -5146,6 +5146,7 @@ button {
 
 .select2-search--dropdown .select2-search__field {
   padding: 10px 5px;
+  padding-left: 15px;
   border-radius: 10px;
   font-size: 16px;
   font-weight: 500;
@@ -6019,6 +6020,34 @@ button {
 
 .events-section {
   padding-top: 40px;
+}
+
+.air-datepicker-cell {
+  font-weight: 500;
+}
+
+.air-datepicker {
+  border-radius: 10px;
+}
+
+.air-datepicker-body--day-name {
+  font-weight: 500;
+  color: #f7931d;
+}
+
+.air-datepicker-cell {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.air-datepicker-cell.-selected- {
+  background-color: transparent !important;
+  color: #f7931d !important;
+  border: 1px solid #f7931d;
+}
+
+.air-datepicker-cell.-selected-:hover {
+  background-color: #f7931d !important;
+  color: #fff !important;
 }
 
 @media all and (min-width: 1024px) {

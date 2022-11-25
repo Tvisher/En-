@@ -1634,6 +1634,7 @@ li {
 }
 .select2-search--dropdown .select2-search__field {
   padding: 10px 5px;
+  padding-left: 15px;
   border-radius: 10px;
   font-size: 16px;
   font-weight: 500;
@@ -2425,4 +2426,28 @@ li {
 }
 .events-section {
   padding-top: 40px;
+}
+
+.air-datepicker-cell {
+  font-weight: 500;
+}
+.air-datepicker {
+  border-radius: 10px;
+}
+.air-datepicker-body--day-name {
+  font-weight: 500;
+  color: $brand-orange;
+}
+.air-datepicker-cell {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.air-datepicker-cell.-selected- {
+  &:hover {
+    background-color: $brand-orange !important;
+    color: #fff !important;
+  }
+  background-color: transparent !important;
+  color: $brand-orange !important;
+  border: 1px solid $brand-orange;
 }
