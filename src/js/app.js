@@ -145,19 +145,32 @@ document.addEventListener('click', (e) => {
 
 $(document).ready(function () {
     $('.categoryes-filter-select').select2({
-        minimumResultsForSearch: -1,
+        // minimumResultsForSearch: -1,
         selectionCssClass: "dropdown-select",
         dropdownCssClass: "dropdown-select-result",
+        "language": {
+            "noResults": function () {
+                return "Не найдено";
+            }
+        },
+        escapeMarkup: function (markup) {
+            return markup;
+        }
     });
     $('.categoryes-filter-select').on('select2:select', function (e) {
         $($(this).data('select2').$container).addClass('option-selected')
     });
 
+    $('.categoryes-filter-select').one('select2:open', function (e) {
+        $('input.select2-search__field').prop('placeholder', 'Поиск');
+    });
+
     $('.sort-dropdown-select').select2({
         minimumResultsForSearch: -1,
-        dropdownAutoWidth: false,
+        dropdownAutoWidth: true,
         selectionCssClass: "sort-dropdown-select-wrapper",
         dropdownCssClass: "sort-dropdown-select-result",
+        dropdownParent: $('.sort-dropdown')
     });
 });
 
