@@ -252,6 +252,82 @@
         </div>
     </section>
 </main>
+<div class="contests-modal show">
+    <div class="modal-slider-content">
+        <div class="modal-slider__head">
+            <div class="modal__auth">
+                <div class="auth__photo">
+                    <img src="img/cercle-image.jpg" alt="">
+                </div>
+                <div class="auth__info">
+                    <div class="auth__name">Александр Евгеньев</div>
+                    <div class="auth__from">Организация En+</div>
+                </div>
+            </div>
+            <button class="close-modal"></button>
+        </div>
+        <div class="modal-slider__body swiper-slider" id="modal-slider-galery">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/modal-slider-1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://klike.net/uploads/posts/2019-06/1560495323_2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://b1.m24.ru/c/1332719.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination lines"></div>
+            <div class="swiper-button-prev cube">
+                <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L2 5L6 1" stroke="#F7931D" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="swiper-button-next cube">
+                <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L5 5L1 9" stroke="#F7931D" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="modal-slider__footer">
+            <div class="slider__footer-wrapper">
+                <div class="vertical-wrapper">
+                    <span class="contest-nameplate">Название работы</span>
+                    <span class="contest__title">“Сад возле моего дома”</span>
+                </div>
+                <button class="like-btn">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.999 10.0585L15 8.87382C15 8.86181 14.9988 8.85009 14.9982 8.83818L14.9976 7.89295C14.9976 6.13623 13.5396 4.70703 11.7476 4.70703C11.7469 4.70703 11.7463 4.70712 11.7456 4.70712H9.5292L10.3067 3.19278C10.4621 2.88875 10.5442 2.54741 10.5442 2.20564C10.5442 0.989449 9.53485 0 8.29425 0C7.43645 0 6.66505 0.46735 6.28105 1.21982L4.46025 4.78937C4.3572 4.73717 4.2405 4.70712 4.1165 4.70712H0.75C0.3358 4.70712 0 5.0363 0 5.44234V14.2648C0 14.6708 0.3358 15 0.75 15H4.1165C4.5307 15 4.8665 14.6708 4.8665 14.2648V14.1608C5.7085 14.7043 6.70115 15 7.74755 15H11.7476C13.5396 15 14.9976 13.5708 14.9976 11.8147L14.9977 11.5634C14.9986 11.5488 15 11.5343 15 11.5196L14.999 10.0585ZM3.3665 13.5296H1.5V6.17755H3.3665V13.5296ZM11.7476 13.5296H7.74755C6.6211 13.5296 5.5819 13.0497 4.8665 12.2067V7.28066L7.62255 1.87763C7.75075 1.62653 8.0081 1.47047 8.29425 1.47047C8.7078 1.47047 9.04425 1.80029 9.04425 2.20569C9.04425 2.32146 9.0178 2.43189 8.9662 2.53286L7.6422 5.11183C7.5252 5.33975 7.53705 5.61085 7.67365 5.82803C7.81015 6.04526 8.05185 6.17755 8.31215 6.17755H11.7476C11.748 6.17755 11.7485 6.1775 11.7489 6.1775C12.7132 6.17819 13.4976 6.94746 13.4976 7.89344L13.499 10.0584L13.4976 11.8141C13.4976 12.76 12.7125 13.5296 11.7476 13.5296Z" fill="#F7931D" />
+                    </svg>
+                    <span class="count">10</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // Инит слайдера модального окна
+    const mainSlider = new Swiper('#modal-slider-galery', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        speed: 800,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+    });
+</script>
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
