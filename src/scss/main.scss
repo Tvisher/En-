@@ -2184,7 +2184,7 @@ li {
     margin-bottom: 0;
   }
 }
-.search-head {
+.lines-head {
   position: relative;
   padding-top: 90px;
   &:before {
@@ -2329,6 +2329,7 @@ li {
 }
 
 .toggle-btns-wrapper {
+  gap: 30px;
   position: relative;
   display: flex;
   padding-bottom: 10px;
@@ -2369,7 +2370,7 @@ li {
 }
 
 .toggle-content-wrapper {
-  padding-bottom: 100px;
+  // padding-bottom: 100px;
 }
 
 .contests-list {
@@ -2384,7 +2385,8 @@ li {
   }
   .list-item__wrapper {
     &:hover {
-      .list-item__btn {
+      .list-item__btn,
+      .list-item__descr {
         opacity: 1;
       }
       .list-item__image {
@@ -2406,7 +2408,7 @@ li {
     z-index: -1;
     &::before,
     &::after {
-      transition: opacity 0.25s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
       content: "";
       position: absolute;
       left: 0;
@@ -2475,6 +2477,14 @@ li {
     font-weight: 700;
     font-size: 18px;
     color: #fff;
+  }
+  .list-item__descr {
+    font-weight: 500;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    margin: 20px 0;
+    @include pruning(5);
+    color: #ffffff;
   }
 }
 
@@ -2603,3 +2613,81 @@ li {
 }
 
 @import "components/contests";
+
+.contests-list._media {
+  .contest-nameplate {
+    color: #d9d9d9;
+  }
+}
+
+.video-list {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+  .list-item {
+    width: 25%;
+    padding: 20px 10px;
+  }
+  .list-item__wrapper {
+    cursor: pointer;
+    &:hover {
+      .slide-hover {
+        opacity: 1;
+      }
+    }
+  }
+  .image-container__wrapper {
+    margin-bottom: 10px;
+    height: 290px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .slide-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .category-nameplane {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  .video-title:before {
+    width: 14px;
+    height: 20px;
+  }
+}
+
+.tv-wrapper {
+  padding-bottom: 100px;
+}
+
+.back-orange-link {
+  text-decoration: underline;
+  color: $brand-orange;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 500;
+  font-size: 20px;
+  &:before {
+    display: block;
+    content: "";
+    width: 8px;
+    height: 14px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 9L2 5L6 1' stroke='%23F7931D' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}

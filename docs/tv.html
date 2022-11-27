@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En+</title>
+    <link rel="preload" href="./fonts/Formular-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Formular-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Formular-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Formular-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <script> </script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container large">
+            <div class="header__wrapper">
+                <a href="index.html" class="header__logo">
+                    <!-- <img src="img/logo.svg" alt=""> -->
+                    <img src="img/vestnik-logo.svg" alt="">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__nav-menu">
+                        <li class="list-item">
+                            <a class="nav-menu__link width-dropdown" href="#">
+                                <span>Рубрики</span>
+                                <div class="arrow">
+                                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 1L5 5L1 1" stroke="#F7931D" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-item"><a class="nav-menu__link" href="#">События отрасли</a></li>
+                        <li class="list-item"><a class="nav-menu__link" href="#">Опросы</a></li>
+                        <li class="list-item"><a class="nav-menu__link" href="#">Медиа</a></li>
+                        <li class="list-item"><a class="nav-menu__link" href="#">Конкурсы</a></li>
+                        <li class="list-item"><a class="nav-menu__link" href="#">Корпоративное ТВ</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="header__search">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M29.6133 27.8417L22.1824 20.4034C23.9406 18.2466 25.0004 15.5017 25.0004 12.5055C25.0004 5.61246 19.3951 0 12.4971 0C5.5992 0 0 5.61246 0 12.5055C0 19.3985 5.60533 25.0049 12.5033 25.0049C15.4928 25.0049 18.2434 23.9449 20.3997 22.1864L27.8306 29.6186C28.3391 30.1271 29.111 30.1271 29.6194 29.6186C30.1279 29.11 30.1279 28.3503 29.6133 27.8417ZM2.4933 12.5055C2.4933 6.98494 6.97756 2.49987 12.4971 2.49987C18.0167 2.49987 22.5071 6.99107 22.5071 12.5116C22.5071 18.0322 18.0167 22.5234 12.4971 22.5234C6.97756 22.5234 2.4933 18.026 2.4933 12.5055Z" fill="#8A8A8A" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="categories__menu">
+        <div class="container large">
+            <ul class="categories__menu-list">
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Новости производства</span>
+                        <span class="count">32</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Бизнес система</span>
+                        <span class="count">14</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Экономика</span>
+                        <span class="count">21</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Люди компании</span>
+                        <span class="count">11</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Социальная ответственность</span>
+                        <span class="count">8</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Я рекомендую</span>
+                        <span class="count">4</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Учебное время</span>
+                        <span class="count">6</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Энергетика в искусстве</span>
+                        <span class="count">9</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Энергофакты</span>
+                        <span class="count">8</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="category-link">
+                        <span>Фотофакты</span>
+                        <span class="count">13</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<main>
+    <section class="lines-head">
+        <div class="container">
+            <h1 class="large-title">Корпоративное ТВ</h1>
+            <div class="tv-wrapper">
+                <ul class="video-list">
+                    <li class="list-item">
+                        <a href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox="" class="list-item__wrapper">
+                            <div class="image-container__wrapper">
+                                <div class="slide-hover _video"></div>
+                                <img src="img/evetn-img-3.jpg" alt="">
+                                <div class="category-nameplane">
+                                    <div class="ico">
+                                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.62233 7.54299C2.53485 9.03239 3.74652 10.489 5.13339 11.5959C6.64674 12.8037 8.31503 13.5542 10 13.5542C11.685 13.5542 13.3532 12.8037 14.8666 11.5959C16.2535 10.489 17.4651 9.03238 18.3777 7.54298C17.2756 6.05806 16.1196 4.58514 14.7996 3.45013C13.3787 2.22827 11.8222 1.44578 10 1.44578C8.17785 1.44578 6.62138 2.22828 5.20042 3.45015C3.88047 4.58517 2.72444 6.05808 1.62233 7.54299ZM4.22101 2.36539C5.80753 1.00115 7.69831 0 10 0C12.3017 0 14.1925 1.00113 15.779 2.36536C17.3543 3.71989 18.6827 5.47905 19.8607 7.07802C20.0288 7.30619 20.0462 7.60876 19.9052 7.85382C18.8968 9.6071 17.4821 11.3761 15.8045 12.715C14.1303 14.0512 12.1404 15 10 15C7.85956 15 5.8697 14.0512 4.19552 12.715C2.51784 11.3761 1.10313 9.6071 0.0947883 7.85381C-0.0461518 7.60875 -0.0287863 7.30618 0.139315 7.07801C1.3173 5.47907 2.64577 3.71992 4.22101 2.36539ZM6.48148 7.5C6.48148 5.63468 8.08438 4.17053 10 4.17053C11.9156 4.17053 13.5185 5.63468 13.5185 7.5C13.5185 9.36532 11.9156 10.8295 10 10.8295C8.08438 10.8295 6.48148 9.36532 6.48148 7.5ZM10 5.61631C8.84728 5.61631 7.96296 6.48609 7.96296 7.5C7.96296 8.51391 8.84728 9.38369 10 9.38369C11.1527 9.38369 12.037 8.51391 12.037 7.5C12.037 6.48609 11.1527 5.61631 10 5.61631Z" fill="white"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="count">103</div>
+                                </div>
+                            </div>
+                            <h5 class="video-title">Тепло - досрочно</h5>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <a href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox="" class="list-item__wrapper">
+                            <div class="image-container__wrapper">
+                                <div class="slide-hover _video"></div>
+                                <img src="img/media-slider-img-2.jpg" alt="">
+                                <div class="category-nameplane">
+                                    <div class="ico">
+                                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.62233 7.54299C2.53485 9.03239 3.74652 10.489 5.13339 11.5959C6.64674 12.8037 8.31503 13.5542 10 13.5542C11.685 13.5542 13.3532 12.8037 14.8666 11.5959C16.2535 10.489 17.4651 9.03238 18.3777 7.54298C17.2756 6.05806 16.1196 4.58514 14.7996 3.45013C13.3787 2.22827 11.8222 1.44578 10 1.44578C8.17785 1.44578 6.62138 2.22828 5.20042 3.45015C3.88047 4.58517 2.72444 6.05808 1.62233 7.54299ZM4.22101 2.36539C5.80753 1.00115 7.69831 0 10 0C12.3017 0 14.1925 1.00113 15.779 2.36536C17.3543 3.71989 18.6827 5.47905 19.8607 7.07802C20.0288 7.30619 20.0462 7.60876 19.9052 7.85382C18.8968 9.6071 17.4821 11.3761 15.8045 12.715C14.1303 14.0512 12.1404 15 10 15C7.85956 15 5.8697 14.0512 4.19552 12.715C2.51784 11.3761 1.10313 9.6071 0.0947883 7.85381C-0.0461518 7.60875 -0.0287863 7.30618 0.139315 7.07801C1.3173 5.47907 2.64577 3.71992 4.22101 2.36539ZM6.48148 7.5C6.48148 5.63468 8.08438 4.17053 10 4.17053C11.9156 4.17053 13.5185 5.63468 13.5185 7.5C13.5185 9.36532 11.9156 10.8295 10 10.8295C8.08438 10.8295 6.48148 9.36532 6.48148 7.5ZM10 5.61631C8.84728 5.61631 7.96296 6.48609 7.96296 7.5C7.96296 8.51391 8.84728 9.38369 10 9.38369C11.1527 9.38369 12.037 8.51391 12.037 7.5C12.037 6.48609 11.1527 5.61631 10 5.61631Z" fill="white"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="count">103</div>
+                                </div>
+                            </div>
+                            <h5 class="video-title">Еще срок не подошел</h5>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <a href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox="" class="list-item__wrapper">
+                            <div class="image-container__wrapper">
+                                <div class="slide-hover _video"></div>
+                                <img src="img/media-slider-img-3.jpg" alt="">
+                                <div class="category-nameplane">
+                                    <div class="ico">
+                                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.62233 7.54299C2.53485 9.03239 3.74652 10.489 5.13339 11.5959C6.64674 12.8037 8.31503 13.5542 10 13.5542C11.685 13.5542 13.3532 12.8037 14.8666 11.5959C16.2535 10.489 17.4651 9.03238 18.3777 7.54298C17.2756 6.05806 16.1196 4.58514 14.7996 3.45013C13.3787 2.22827 11.8222 1.44578 10 1.44578C8.17785 1.44578 6.62138 2.22828 5.20042 3.45015C3.88047 4.58517 2.72444 6.05808 1.62233 7.54299ZM4.22101 2.36539C5.80753 1.00115 7.69831 0 10 0C12.3017 0 14.1925 1.00113 15.779 2.36536C17.3543 3.71989 18.6827 5.47905 19.8607 7.07802C20.0288 7.30619 20.0462 7.60876 19.9052 7.85382C18.8968 9.6071 17.4821 11.3761 15.8045 12.715C14.1303 14.0512 12.1404 15 10 15C7.85956 15 5.8697 14.0512 4.19552 12.715C2.51784 11.3761 1.10313 9.6071 0.0947883 7.85381C-0.0461518 7.60875 -0.0287863 7.30618 0.139315 7.07801C1.3173 5.47907 2.64577 3.71992 4.22101 2.36539ZM6.48148 7.5C6.48148 5.63468 8.08438 4.17053 10 4.17053C11.9156 4.17053 13.5185 5.63468 13.5185 7.5C13.5185 9.36532 11.9156 10.8295 10 10.8295C8.08438 10.8295 6.48148 9.36532 6.48148 7.5ZM10 5.61631C8.84728 5.61631 7.96296 6.48609 7.96296 7.5C7.96296 8.51391 8.84728 9.38369 10 9.38369C11.1527 9.38369 12.037 8.51391 12.037 7.5C12.037 6.48609 11.1527 5.61631 10 5.61631Z" fill="white"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="count">103</div>
+                                </div>
+                            </div>
+                            <h5 class="video-title">Пока перенесем</h5>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <a href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox="" class="list-item__wrapper">
+                            <div class="image-container__wrapper">
+                                <div class="slide-hover _video"></div>
+                                <img src="img/media-slider-img-30.jpg" alt="">
+                                <div class="category-nameplane">
+                                    <div class="ico">
+                                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.62233 7.54299C2.53485 9.03239 3.74652 10.489 5.13339 11.5959C6.64674 12.8037 8.31503 13.5542 10 13.5542C11.685 13.5542 13.3532 12.8037 14.8666 11.5959C16.2535 10.489 17.4651 9.03238 18.3777 7.54298C17.2756 6.05806 16.1196 4.58514 14.7996 3.45013C13.3787 2.22827 11.8222 1.44578 10 1.44578C8.17785 1.44578 6.62138 2.22828 5.20042 3.45015C3.88047 4.58517 2.72444 6.05808 1.62233 7.54299ZM4.22101 2.36539C5.80753 1.00115 7.69831 0 10 0C12.3017 0 14.1925 1.00113 15.779 2.36536C17.3543 3.71989 18.6827 5.47905 19.8607 7.07802C20.0288 7.30619 20.0462 7.60876 19.9052 7.85382C18.8968 9.6071 17.4821 11.3761 15.8045 12.715C14.1303 14.0512 12.1404 15 10 15C7.85956 15 5.8697 14.0512 4.19552 12.715C2.51784 11.3761 1.10313 9.6071 0.0947883 7.85381C-0.0461518 7.60875 -0.0287863 7.30618 0.139315 7.07801C1.3173 5.47907 2.64577 3.71992 4.22101 2.36539ZM6.48148 7.5C6.48148 5.63468 8.08438 4.17053 10 4.17053C11.9156 4.17053 13.5185 5.63468 13.5185 7.5C13.5185 9.36532 11.9156 10.8295 10 10.8295C8.08438 10.8295 6.48148 9.36532 6.48148 7.5ZM10 5.61631C8.84728 5.61631 7.96296 6.48609 7.96296 7.5C7.96296 8.51391 8.84728 9.38369 10 9.38369C11.1527 9.38369 12.037 8.51391 12.037 7.5C12.037 6.48609 11.1527 5.61631 10 5.61631Z" fill="white"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="count">103</div>
+                                </div>
+                            </div>
+                            <h5 class="video-title">Мы готовы!</h5>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <a href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox="" class="list-item__wrapper">
+                            <div class="image-container__wrapper">
+                                <div class="slide-hover _video"></div>
+                                <img src="img/media-slider-img-31.jpg" alt="">
+                                <div class="category-nameplane">
+                                    <div class="ico">
+                                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.62233 7.54299C2.53485 9.03239 3.74652 10.489 5.13339 11.5959C6.64674 12.8037 8.31503 13.5542 10 13.5542C11.685 13.5542 13.3532 12.8037 14.8666 11.5959C16.2535 10.489 17.4651 9.03238 18.3777 7.54298C17.2756 6.05806 16.1196 4.58514 14.7996 3.45013C13.3787 2.22827 11.8222 1.44578 10 1.44578C8.17785 1.44578 6.62138 2.22828 5.20042 3.45015C3.88047 4.58517 2.72444 6.05808 1.62233 7.54299ZM4.22101 2.36539C5.80753 1.00115 7.69831 0 10 0C12.3017 0 14.1925 1.00113 15.779 2.36536C17.3543 3.71989 18.6827 5.47905 19.8607 7.07802C20.0288 7.30619 20.0462 7.60876 19.9052 7.85382C18.8968 9.6071 17.4821 11.3761 15.8045 12.715C14.1303 14.0512 12.1404 15 10 15C7.85956 15 5.8697 14.0512 4.19552 12.715C2.51784 11.3761 1.10313 9.6071 0.0947883 7.85381C-0.0461518 7.60875 -0.0287863 7.30618 0.139315 7.07801C1.3173 5.47907 2.64577 3.71992 4.22101 2.36539ZM6.48148 7.5C6.48148 5.63468 8.08438 4.17053 10 4.17053C11.9156 4.17053 13.5185 5.63468 13.5185 7.5C13.5185 9.36532 11.9156 10.8295 10 10.8295C8.08438 10.8295 6.48148 9.36532 6.48148 7.5ZM10 5.61631C8.84728 5.61631 7.96296 6.48609 7.96296 7.5C7.96296 8.51391 8.84728 9.38369 10 9.38369C11.1527 9.38369 12.037 8.51391 12.037 7.5C12.037 6.48609 11.1527 5.61631 10 5.61631Z" fill="white"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="count">103</div>
+                                </div>
+                            </div>
+                            <h5 class="video-title">Объявляется остановка</h5>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <a href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox="" class="list-item__wrapper">
+                            <div class="image-container__wrapper">
+                                <div class="slide-hover _video"></div>
+                                <img src="img/category-slide-1.jpg" alt="">
+                                <div class="category-nameplane">
+                                    <div class="ico">
+                                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.62233 7.54299C2.53485 9.03239 3.74652 10.489 5.13339 11.5959C6.64674 12.8037 8.31503 13.5542 10 13.5542C11.685 13.5542 13.3532 12.8037 14.8666 11.5959C16.2535 10.489 17.4651 9.03238 18.3777 7.54298C17.2756 6.05806 16.1196 4.58514 14.7996 3.45013C13.3787 2.22827 11.8222 1.44578 10 1.44578C8.17785 1.44578 6.62138 2.22828 5.20042 3.45015C3.88047 4.58517 2.72444 6.05808 1.62233 7.54299ZM4.22101 2.36539C5.80753 1.00115 7.69831 0 10 0C12.3017 0 14.1925 1.00113 15.779 2.36536C17.3543 3.71989 18.6827 5.47905 19.8607 7.07802C20.0288 7.30619 20.0462 7.60876 19.9052 7.85382C18.8968 9.6071 17.4821 11.3761 15.8045 12.715C14.1303 14.0512 12.1404 15 10 15C7.85956 15 5.8697 14.0512 4.19552 12.715C2.51784 11.3761 1.10313 9.6071 0.0947883 7.85381C-0.0461518 7.60875 -0.0287863 7.30618 0.139315 7.07801C1.3173 5.47907 2.64577 3.71992 4.22101 2.36539ZM6.48148 7.5C6.48148 5.63468 8.08438 4.17053 10 4.17053C11.9156 4.17053 13.5185 5.63468 13.5185 7.5C13.5185 9.36532 11.9156 10.8295 10 10.8295C8.08438 10.8295 6.48148 9.36532 6.48148 7.5ZM10 5.61631C8.84728 5.61631 7.96296 6.48609 7.96296 7.5C7.96296 8.51391 8.84728 9.38369 10 9.38369C11.1527 9.38369 12.037 8.51391 12.037 7.5C12.037 6.48609 11.1527 5.61631 10 5.61631Z" fill="white"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="count">103</div>
+                                </div>
+                            </div>
+                            <h5 class="video-title">Для вас бесплатно</h5>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <a href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox="" class="list-item__wrapper">
+                            <div class="image-container__wrapper">
+                                <div class="slide-hover _video"></div>
+                                <img src="img/media-slider-img-13.jpg" alt="">
+                                <div class="category-nameplane">
+                                    <div class="ico">
+                                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.62233 7.54299C2.53485 9.03239 3.74652 10.489 5.13339 11.5959C6.64674 12.8037 8.31503 13.5542 10 13.5542C11.685 13.5542 13.3532 12.8037 14.8666 11.5959C16.2535 10.489 17.4651 9.03238 18.3777 7.54298C17.2756 6.05806 16.1196 4.58514 14.7996 3.45013C13.3787 2.22827 11.8222 1.44578 10 1.44578C8.17785 1.44578 6.62138 2.22828 5.20042 3.45015C3.88047 4.58517 2.72444 6.05808 1.62233 7.54299ZM4.22101 2.36539C5.80753 1.00115 7.69831 0 10 0C12.3017 0 14.1925 1.00113 15.779 2.36536C17.3543 3.71989 18.6827 5.47905 19.8607 7.07802C20.0288 7.30619 20.0462 7.60876 19.9052 7.85382C18.8968 9.6071 17.4821 11.3761 15.8045 12.715C14.1303 14.0512 12.1404 15 10 15C7.85956 15 5.8697 14.0512 4.19552 12.715C2.51784 11.3761 1.10313 9.6071 0.0947883 7.85381C-0.0461518 7.60875 -0.0287863 7.30618 0.139315 7.07801C1.3173 5.47907 2.64577 3.71992 4.22101 2.36539ZM6.48148 7.5C6.48148 5.63468 8.08438 4.17053 10 4.17053C11.9156 4.17053 13.5185 5.63468 13.5185 7.5C13.5185 9.36532 11.9156 10.8295 10 10.8295C8.08438 10.8295 6.48148 9.36532 6.48148 7.5ZM10 5.61631C8.84728 5.61631 7.96296 6.48609 7.96296 7.5C7.96296 8.51391 8.84728 9.38369 10 9.38369C11.1527 9.38369 12.037 8.51391 12.037 7.5C12.037 6.48609 11.1527 5.61631 10 5.61631Z" fill="white"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="count">103</div>
+                                </div>
+                            </div>
+                            <h5 class="video-title">Играют по-крупному</h5>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <a href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox="" class="list-item__wrapper">
+                            <div class="image-container__wrapper">
+                                <div class="slide-hover _video"></div>
+                                <img src="img/media-slider-img-3.jpg" alt="">
+                                <div class="category-nameplane">
+                                    <div class="ico">
+                                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.62233 7.54299C2.53485 9.03239 3.74652 10.489 5.13339 11.5959C6.64674 12.8037 8.31503 13.5542 10 13.5542C11.685 13.5542 13.3532 12.8037 14.8666 11.5959C16.2535 10.489 17.4651 9.03238 18.3777 7.54298C17.2756 6.05806 16.1196 4.58514 14.7996 3.45013C13.3787 2.22827 11.8222 1.44578 10 1.44578C8.17785 1.44578 6.62138 2.22828 5.20042 3.45015C3.88047 4.58517 2.72444 6.05808 1.62233 7.54299ZM4.22101 2.36539C5.80753 1.00115 7.69831 0 10 0C12.3017 0 14.1925 1.00113 15.779 2.36536C17.3543 3.71989 18.6827 5.47905 19.8607 7.07802C20.0288 7.30619 20.0462 7.60876 19.9052 7.85382C18.8968 9.6071 17.4821 11.3761 15.8045 12.715C14.1303 14.0512 12.1404 15 10 15C7.85956 15 5.8697 14.0512 4.19552 12.715C2.51784 11.3761 1.10313 9.6071 0.0947883 7.85381C-0.0461518 7.60875 -0.0287863 7.30618 0.139315 7.07801C1.3173 5.47907 2.64577 3.71992 4.22101 2.36539ZM6.48148 7.5C6.48148 5.63468 8.08438 4.17053 10 4.17053C11.9156 4.17053 13.5185 5.63468 13.5185 7.5C13.5185 9.36532 11.9156 10.8295 10 10.8295C8.08438 10.8295 6.48148 9.36532 6.48148 7.5ZM10 5.61631C8.84728 5.61631 7.96296 6.48609 7.96296 7.5C7.96296 8.51391 8.84728 9.38369 10 9.38369C11.1527 9.38369 12.037 8.51391 12.037 7.5C12.037 6.48609 11.1527 5.61631 10 5.61631Z" fill="white"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="count">103</div>
+                                </div>
+                            </div>
+                            <h5 class="video-title">Для надежности тока</h5>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="btn ghost-orange show-more-btn">
+                    <span> Больше видео</span>
+                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 1L5 5L1 1" stroke="#F7931D" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__start">
+                <a href="#" class="btn">Связаться с редакцией</a>
+                <div class="socials">
+                    <a href="#" class="socials__item"></a>
+                    <a href="#" class="socials__item"></a>
+                    <a href="#" class="socials__item"></a>
+                    <a href="#" class="socials__item"></a>
+                    <a href="#" class="socials__item"></a>
+                </div>
+            </div>
+            <div class="footer__end">
+                <div class="text-wrap">
+                    <span>Политика конфиденциальности</span>
+                    <span>Номер регистрации СМИ</span>
+                </div>
+                <div class="text-wrap">
+                    <span>Copyright © 2022 IPJSC EN+ GROUP</span>
+                    <span>Сделано в <a href="#">МедиаЛайн</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+<script src="./js/fancybox.umd.js"></script>
+<script src="./js/air-datepicker.js"></script>
+<script src="./js/app.js"></script>
+
+</html>
