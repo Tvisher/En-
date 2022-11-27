@@ -3336,8 +3336,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   object-fit: contain;
 }
 
+.header {
+  position: relative;
+}
+
 .header__wrapper {
-  padding: 20px 0;
   display: flex;
   align-items: center;
   gap: 50px;
@@ -3353,6 +3356,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   gap: 40px;
 }
 
+.header__nav-menu > .list-item {
+  padding: 30px 0;
+}
+
 .nav-menu__link {
   padding: 5px;
   font-weight: 500;
@@ -3361,7 +3368,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   color: #202020;
 }
 
-.nav-menu__link.width-dropdown {
+.width-dropdown .nav-menu__link {
   color: #f7931d;
   gap: 10px;
   display: flex;
@@ -3369,13 +3376,25 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   gap: 10px;
 }
 
-.nav-menu__link.width-dropdown .arrow {
+.width-dropdown .nav-menu__link .arrow {
   width: 8px;
   height: 8px;
 }
 
+.width-dropdown:hover .categories__menu {
+  opacity: 1;
+  visibility: visible;
+}
+
 .categories__menu {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  z-index: 100;
   padding: 20px 0;
   background: #ffffff;
   box-shadow: 0px 10px 10px rgba(32, 32, 32, 0.1);
@@ -3577,7 +3596,6 @@ li {
 .container {
   width: 100%;
   flex: 0 0 auto;
-  position: relative;
   max-width: 1678px;
   margin: 0 auto;
   padding: 0 15px;
