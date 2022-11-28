@@ -17,6 +17,14 @@
     object-fit: contain;
     object-position: center;
   }
+  svg path {
+    transition: fill 0.2s ease-in-out;
+  }
+  &:hover {
+    svg path {
+      fill: $brand-orange;
+    }
+  }
 }
 .header {
   position: relative;
@@ -46,6 +54,10 @@
   font-size: 22px;
   line-height: 160%;
   color: $brand-black;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: $brand-orange;
+  }
 }
 .width-dropdown {
   .nav-menu__link {
@@ -57,13 +69,13 @@
     align-items: center;
     gap: 10px;
     .arrow {
+      cursor: pointer;
       width: 8px;
       height: 8px;
     }
   }
   &:hover {
     .categories__menu {
-      // display: block;
       opacity: 1;
       visibility: visible;
     }
@@ -120,6 +132,11 @@
   position: absolute;
   right: 20px;
   top: 35px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .mobile-menu-btn {
@@ -130,7 +147,13 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
+  &:hover {
+    span {
+      background-color: $brand-orange;
+    }
+  }
   span {
+    transition: background-color 0.2s ease-in-out;
     background: #8a8a8a;
     border-radius: 10px;
     width: 25px;

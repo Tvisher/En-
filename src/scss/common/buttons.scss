@@ -19,6 +19,10 @@
   &.ghost-orange {
     border-color: $brand-orange;
     color: $brand-orange;
+    &:hover {
+      color: #fff;
+      background-color: $brand-orange;
+    }
   }
   &.fill-orange {
     background: linear-gradient(90deg, #f7931d 0%, #ff5c00 100%);
