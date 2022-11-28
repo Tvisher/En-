@@ -46,12 +46,23 @@ const mainSlider = new Swiper('.main-slider', {
 
 // Слайдеры секции Media на главной странице
 const mediaSlider = new Swiper('.media-section__slider', {
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 20,
     speed: 800,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        '1280': {
+            slidesPerView: 4,
+        },
+        '992': {
+            slidesPerView: 3,
+        },
+        '680': {
+            slidesPerView: 2,
+        },
     },
     pagination: {
         el: '.swiper-pagination',
@@ -132,9 +143,9 @@ const articleLargeSlider = new Swiper('.article__large-slider', {
 
 document.addEventListener('click', (e) => {
     const target = e.target;
-    // Выбор слайдера в секии медиа
-    const targetBtn = target.closest('[data-toggle-btn]');
-    if (targetBtn) {
+    // Табы
+    if (target.closest('[data-toggle-btn]')) {
+        const targetBtn = target.closest('[data-toggle-btn]');
         const tatargetBtnId = targetBtn.getAttribute('data-toggle-btn');
         const activeBtn = document.querySelector('[data-toggle-btn].active');
         if (activeBtn) activeBtn.classList.remove('active');
@@ -144,6 +155,13 @@ document.addEventListener('click', (e) => {
         const selectedSlider = document.querySelector(`[data-toggle-id="${tatargetBtnId}"]`);
         if (selectedSlider) selectedSlider.classList.add('show');
     }
+    if (target.closest('[data-close-mob-menu]')) {
+        document.querySelector('[data-mob-menu]').classList.remove('show');
+    }
+    if (target.closest('[data-open-mob-menu]')) {
+        document.querySelector('[data-mob-menu]').classList.add('show');
+    }
+
 });
 
 $(document).ready(function () {
@@ -176,6 +194,12 @@ $(document).ready(function () {
         dropdownCssClass: "sort-dropdown-select-result",
         dropdownParent: $('.sort-dropdown')
     });
+});
+
+
+$("[data-toggle-menu]").on('click', function () {
+    if (window.innerWidth > 1380) return;
+    $(this).parents('.width-dropdown').find('[data-toggle-content]').slideToggle("slow");
 });
 
 

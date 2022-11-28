@@ -558,7 +558,7 @@
 
             // Инициализация слайдера со слайдами конкретной категории.
             const categorySlider = new Swiper('.category-slider', {
-                slidesPerView: 4,
+                slidesPerView: 1,
                 spaceBetween: 20,
                 navigation: {
                     nextEl: '.swiper-button-next',
@@ -568,6 +568,17 @@
                     el: '.swiper-pagination',
                     type: 'bullets',
                     clickable: true,
+                },
+                breakpoints: {
+                    '1280': {
+                        slidesPerView: 4,
+                    },
+                    '992': {
+                        slidesPerView: 3,
+                    },
+                    '680': {
+                        slidesPerView: 2,
+                    },
                 },
                 on: {
                     resize(slider) {

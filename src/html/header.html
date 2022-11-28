@@ -26,18 +26,20 @@
                     <!-- <img src="@img/logo.svg" alt=""> -->
                     <img src="@img/vestnik-logo.svg" alt="">
                 </a>
-                <nav class="header__nav">
+                <nav class="header__nav" data-mob-menu>
+                    <div class="mobile-close-btn" data-close-mob-menu>
+                    </div>
                     <ul class="header__nav-menu">
                         <li class="list-item  width-dropdown">
                             <a class="nav-menu__link" href="#">
                                 <span>Рубрики</span>
-                                <div class="arrow">
+                                <div class="arrow" data-toggle-menu>
                                     <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9 1L5 5L1 1" stroke="#F7931D" stroke-width="2" stroke-linecap="round" />
                                     </svg>
                                 </div>
                             </a>
-                            <div class="categories__menu">
+                            <div class="categories__menu" data-toggle-content>
                                 <div class="container large">
                                     <ul class="categories__menu-list">
                                         <li class="list-item">
@@ -111,6 +113,11 @@
                         <li class="list-item"><a class="nav-menu__link" href="#">Корпоративное ТВ</a></li>
                     </ul>
                 </nav>
+                <div class="mobile-menu-btn" data-open-mob-menu>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <a href="#" class="header__search">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M29.6133 27.8417L22.1824 20.4034C23.9406 18.2466 25.0004 15.5017 25.0004 12.5055C25.0004 5.61246 19.3951 0 12.4971 0C5.5992 0 0 5.61246 0 12.5055C0 19.3985 5.60533 25.0049 12.5033 25.0049C15.4928 25.0049 18.2434 23.9449 20.3997 22.1864L27.8306 29.6186C28.3391 30.1271 29.111 30.1271 29.6194 29.6186C30.1279 29.11 30.1279 28.3503 29.6133 27.8417ZM2.4933 12.5055C2.4933 6.98494 6.97756 2.49987 12.4971 2.49987C18.0167 2.49987 22.5071 6.99107 22.5071 12.5116C22.5071 18.0322 18.0167 22.5234 12.4971 22.5234C6.97756 22.5234 2.4933 18.026 2.4933 12.5055Z" fill="#8A8A8A" />
