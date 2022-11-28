@@ -82,7 +82,7 @@ const archiveSlider = new Swiper('.archive-section__slider', {
             setTimeout(() => {
                 slider.updateSlides();
                 slider.slideTo(slider.realIndex, 300);
-            }, 380);
+            }, 400);
         },
         transitionEnd(slider) {
             setTimeout(() => {
