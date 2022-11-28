@@ -3424,7 +3424,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .category-link {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   line-height: 160%;
   padding: 12px 18px;
@@ -4015,7 +4015,7 @@ button {
   bottom: 0px;
   background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0.7) 70%, rgb(255, 255, 255) 100%);
   z-index: 2;
-  width: 120px;
+  width: 80px;
   opacity: 1;
   visibility: visible;
   transition: opacity 0.12s ease-in-out, visibility 0.12s ease-in-out;
@@ -4688,6 +4688,10 @@ button {
 
 .media-section__slide .category-nameplane svg path {
   fill: #fff;
+}
+
+.media-section__slide .video-title {
+  color: #fff;
 }
 
 .slide-hover {
@@ -7139,6 +7143,10 @@ button {
 }
 
 @media (max-width: 1380px) {
+  .header__logo {
+    max-width: 300px;
+  }
+
   .header__wrapper {
     padding: 20px 0;
     justify-content: space-between;
@@ -7310,6 +7318,14 @@ button {
 }
 
 @media (max-width: 992px) {
+  .archive-section__slide .slide-item__before {
+    opacity: 0 !important;
+  }
+
+  .archive-section__slide.swiper-slide-active .slide-item__before {
+    opacity: 1 !important;
+  }
+
   .news-section .category-item:not(:last-child) {
     margin-right: 30px;
   }
@@ -7402,7 +7418,6 @@ button {
 
 @media (max-width: 680px) {
   .header__logo {
-    max-width: 380px;
     width: 100%;
     flex-shrink: inherit;
   }
@@ -7477,6 +7492,10 @@ button {
 }
 
 @media (max-width: 576px) {
+  .header__logo {
+    max-width: 250px;
+  }
+
   .news-section__body .category-slide__head {
     height: 80vw;
   }
@@ -7574,9 +7593,28 @@ button {
   .main-slider .main-slider__slide .info-wrapper {
     top: 90vw;
   }
+
+  .slide-hover,
+  .event-block__image::before,
+  .news-section__body .category-slide__head:before {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 440px) {
+  .mobile-close-btn {
+    width: 25px;
+    height: 25px;
+  }
+
+  .news-section__body .category-slide__title {
+    margin-bottom: 10px;
+  }
+
+  .title-wrapper {
+    gap: 10px;
+  }
+
   .header__nav-menu > .list-item {
     padding: 0px 10px;
   }
