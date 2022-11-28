@@ -32,6 +32,10 @@
     display: flex;
     gap: 40px;
     color: $brand-gray;
+    & > a {
+      color: $brand-gray !important;
+      text-decoration: none !important;
+    }
     a {
       display: inline;
       color: $brand-orange;
@@ -42,9 +46,10 @@
 
 .footer__start,
 .footer__end {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 20px;
   .btn {
     border-color: #d9d9d9;
     color: $brand-black;

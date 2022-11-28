@@ -49,7 +49,9 @@
 }
 .width-dropdown {
   .nav-menu__link {
-    color: $brand-orange;
+    a {
+      color: $brand-orange;
+    }
     gap: 10px;
     display: flex;
     align-items: center;

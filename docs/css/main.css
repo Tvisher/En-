@@ -3381,11 +3381,14 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .width-dropdown .nav-menu__link {
-  color: #f7931d;
   gap: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.width-dropdown .nav-menu__link a {
+  color: #f7931d;
 }
 
 .width-dropdown .nav-menu__link .arrow {
@@ -3507,6 +3510,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   color: #8a8a8a;
 }
 
+.footer__wrapper .text-wrap > a {
+  color: #8a8a8a !important;
+  text-decoration: none !important;
+}
+
 .footer__wrapper .text-wrap a {
   display: inline;
   color: #f7931d;
@@ -3515,9 +3523,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .footer__start,
 .footer__end {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 20px;
 }
 
 .footer__start .btn,
@@ -7185,6 +7194,7 @@ button {
   }
 
   .width-dropdown .nav-menu__link {
+    gap: 20px;
     align-items: stretch;
     text-align: right;
     flex-direction: row-reverse;
@@ -7196,6 +7206,7 @@ button {
     height: auto;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
   }
 
   .categories__menu {
@@ -7275,6 +7286,7 @@ button {
 
   .inclined-block {
     padding-top: 40px;
+    padding-bottom: 40px;
     position: relative;
     width: 100%;
     clip-path: none;
@@ -7285,7 +7297,23 @@ button {
   }
 }
 
+@media (max-width: 1100px) {
+  .footer__end {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer__end .text-wrap {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
 @media (max-width: 992px) {
+  .news-section .category-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
   .archive-section__slider {
     width: 100%;
   }
@@ -7361,7 +7389,8 @@ button {
 
   .archive-section,
   .media-section,
-  .section-surveys {
+  .section-surveys,
+  .industry-events {
     padding-top: 40px;
   }
 
@@ -7376,6 +7405,16 @@ button {
     max-width: 380px;
     width: 100%;
     flex-shrink: inherit;
+  }
+
+  .footer__end .text-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__start {
+    flex-direction: column;
+    align-items: center;
   }
 
   .section-title.small {
@@ -7399,8 +7438,20 @@ button {
     margin-bottom: 30px;
   }
 
+  .section-surveys .title-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .survey__text {
+    font-size: 16px;
+  }
+
+  .survey__item {
+    margin-bottom: 5px;
+  }
+
   .survey__wrapper .survey__title {
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 20px;
   }
 
