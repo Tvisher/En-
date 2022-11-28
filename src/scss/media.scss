@@ -111,10 +111,6 @@
 }
 
 @media (max-width: 380px) {
-  .header__logo {
-    max-width: 148px;
-    height: 45px;
-  }
   .header__wrapper {
     padding: 8px 0;
   }
@@ -158,6 +154,16 @@
   }
 }
 @media (max-width: 992px) {
+  .archive-section__slider {
+    width: 100%;
+  }
+  .archive-section .swiper-button-prev,
+  .archive-section .swiper-button-next {
+    display: none;
+  }
+  .archive-section .slider-bottom__navigation {
+    display: none;
+  }
   .media-section .media-section__bg {
     clip-path: polygon(56% 0%, 87% 0, 55% 100%, 22% 100%);
   }
@@ -204,71 +210,14 @@
       display: none;
     }
   }
-}
-
-@media (max-width: 576px) {
-  .media-section .media-section__bg {
-    clip-path: polygon(67% 0%, 100% 0, 33% 100%, 0% 100%);
+  .archive-section,
+  .media-section,
+  .section-surveys {
+    padding-top: 40px;
   }
-  .news-section__body {
-    padding-top: 20px;
-  }
-
-  .news-section {
-    .slider-bottom__navigation {
-      margin-top: 10px;
-    }
-  }
-  .news-section__body {
-    min-height: inherit;
-  }
-  .main-slider .category-nameplane {
-    font-size: 12px;
-    margin-bottom: 0;
-  }
-  .main-slider .slide-item__iamge {
-    height: 440px;
-  }
-  .main-slider .main-slider__slide {
-    .info-wrapper {
-      position: absolute;
-      left: 10px;
-      top: 400px;
-      .gray-selection {
-        color: #fff;
-        background-color: $brand-black;
-      }
-    }
-  }
-  .main-slider .slide-item__title {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  .main-slider .slide-item__descr {
-    font-size: 14px;
-  }
-  .main-slider .slide-item__content {
-    .btn {
-      width: 100%;
-    }
-  }
-
-  .main-slider {
-    .slider-bottom__navigation {
-      margin-top: 10px;
-    }
-  }
-}
-
-@media (max-width: 460px) {
-  .event-block__image {
-    height: 80vw;
-  }
-  .main-slider .slide-item__iamge {
-    height: 100vw;
-  }
-  .main-slider .main-slider__slide .info-wrapper {
-    top: 90vw;
+  .industry-events,
+  .archive-section {
+    padding-bottom: 40px;
   }
 }
 
@@ -375,9 +324,6 @@
       font-size: 22px;
       margin-bottom: 20px;
     }
-    .survey__item {
-      padding-left: 0;
-    }
   }
   .industry-event__wrapper {
     flex-direction: column;
@@ -391,12 +337,111 @@
     border-radius: 10px 10px 0 0;
   }
 }
+@media (max-width: 576px) {
+  .news-section__body .category-slide__head {
+    height: 80vw;
+  }
+  .media-section .media-section__bg {
+    clip-path: polygon(67% 0%, 100% 0, 33% 100%, 0% 100%);
+  }
+  .news-section__body {
+    padding-top: 20px;
+  }
+
+  .news-section {
+    .slider-bottom__navigation {
+      margin-top: 10px;
+    }
+  }
+  .news-section__body {
+    min-height: inherit;
+  }
+  .main-slider .category-nameplane {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  .main-slider .slide-item__iamge {
+    height: 440px;
+  }
+  .main-slider .main-slider__slide {
+    .info-wrapper {
+      position: absolute;
+      left: 10px;
+      top: 400px;
+      .gray-selection {
+        color: #fff;
+        background-color: $brand-black;
+      }
+    }
+  }
+  .main-slider .slide-item__title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .main-slider .slide-item__descr {
+    font-size: 14px;
+  }
+  .main-slider .slide-item__content {
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .main-slider {
+    .slider-bottom__navigation {
+      margin-top: 10px;
+    }
+  }
+  .archive-section__slide {
+    margin-right: 20px;
+    height: 500px;
+    padding-bottom: 0;
+  }
+
+  .archive-section__slide.swiper-slide-active {
+    width: 280px !important;
+  }
+  .archive-section__slide.swiper-slide-active .slide-item__image {
+    height: 407px !important;
+  }
+  .archive-section__slider {
+    width: auto;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+  .event-block__image {
+    height: 80vw;
+  }
+  .main-slider .slide-item__iamge {
+    height: 100vw;
+  }
+  .main-slider .main-slider__slide .info-wrapper {
+    top: 90vw;
+  }
+}
 
 @media (max-width: 440px) {
+  .header__logo {
+    max-width: 148px;
+    height: 45px;
+  }
   .media-section .media-section__bg {
     display: none;
   }
   .media-section__head {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 380px) {
+  .archive-section__slider {
+    width: auto;
+    margin-right: -10px;
+    margin-left: -10px;
+    padding-left: 10px;
   }
 }
