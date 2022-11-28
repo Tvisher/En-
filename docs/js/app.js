@@ -87,9 +87,9 @@ const archiveSlider = new Swiper('.archive-section__slider', {
     },
     on: {
         transitionStart(slider) {
-            slider.allowSlideNext = false;
-            slider.allowSlidePrev = false;
-            slider.el.classList.add('noSwiping');
+            // slider.allowSlideNext = false;
+            // slider.allowSlidePrev = false;
+            // slider.el.classList.add('noSwiping');
             setTimeout(() => {
                 slider.updateSlides();
                 slider.slideTo(slider.realIndex, 350);
@@ -97,9 +97,9 @@ const archiveSlider = new Swiper('.archive-section__slider', {
         },
         transitionEnd(slider) {
             setTimeout(() => {
-                slider.allowSlideNext = true;
-                slider.allowSlidePrev = true;
-                slider.el.classList.remove('noSwiping');
+                // slider.allowSlideNext = true;
+                // slider.allowSlidePrev = true;
+                // slider.el.classList.remove('noSwiping');
             }, 10);
         },
         resize(slider) {
