@@ -460,6 +460,18 @@
 }
 
 @media (max-width: 440px) {
+  .header__nav-menu > .list-item {
+    padding: 0px 10px;
+  }
+  .header__nav-menu {
+    padding-top: 60px;
+  }
+  .mobile-close-btn {
+    top: 15px;
+  }
+  .header__wrapper {
+    padding: 10px 0;
+  }
   .header__logo {
     max-width: 148px;
     height: 45px;
