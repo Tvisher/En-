@@ -92,7 +92,7 @@ const archiveSlider = new Swiper('.archive-section__slider', {
             // slider.el.classList.add('noSwiping');
             setTimeout(() => {
                 slider.updateSlides();
-                slider.slideTo(slider.realIndex, 350);
+                slider.slideTo(slider.realIndex, 600);
             }, 400);
         },
         transitionEnd(slider) {
