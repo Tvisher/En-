@@ -150,10 +150,10 @@ document.addEventListener('click', (e) => {
         const activeBtn = document.querySelector('[data-toggle-btn].active');
         if (activeBtn) activeBtn.classList.remove('active');
         targetBtn.classList.add('active');
-        const activeSlider = document.querySelector('[data-toggle-id].show');
-        if (activeSlider) activeSlider.classList.remove('show');
-        const selectedSlider = document.querySelector(`[data-toggle-id="${tatargetBtnId}"]`);
-        if (selectedSlider) selectedSlider.classList.add('show');
+        const activeTab = document.querySelector('[data-toggle-id].show');
+        if (activeTab) activeTab.classList.remove('show');
+        const selectedTab = document.querySelector(`[data-toggle-id="${tatargetBtnId}"]`);
+        if (selectedTab) selectedTab.classList.add('show');
     }
     if (target.closest('[data-close-mob-menu]')) {
         document.querySelector('[data-mob-menu]').classList.remove('show');
@@ -165,6 +165,7 @@ document.addEventListener('click', (e) => {
 });
 
 $(document).ready(function () {
+    // Выпадающий список для категорий и журналов
     $('.categoryes-filter-select').select2({
         // minimumResultsForSearch: -1,
         selectionCssClass: "dropdown-select",
@@ -186,7 +187,7 @@ $(document).ready(function () {
         $('input.select2-search__field').prop('placeholder', 'Поиск');
     });
 
-
+    // Выпадающий список для сортировки
     $('.sort-dropdown-select').select2({
         minimumResultsForSearch: -1,
         dropdownAutoWidth: true,
@@ -196,15 +197,21 @@ $(document).ready(function () {
     });
 });
 
-
+// Тоглер для рубрик в мобильном меню
 $("[data-toggle-menu]").on('click', function () {
     if (window.innerWidth > 1380) return;
     $(this).parents('.width-dropdown').find('[data-toggle-content]').slideToggle("slow");
 });
 
-
+// Календарь
 const airDatepicker = new AirDatepicker('.datapicker-input', {
     isMobile: true,
     autoClose: true,
     dateFormat: 'dd MMMM yyyy',
+    //Событие выбора даты в календаре
+    onSelect({ date, formattedDate, datepicker }) {
+        console.log({
+            date, formattedDate, datepicker
+        });
+    }
 })
