@@ -3410,6 +3410,14 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   height: 8px;
 }
 
+.width-dropdown .nav-menu__link .arrow svg {
+  transition: transform 0.2s ease-in-out;
+}
+
+.width-dropdown .nav-menu__link .arrow.open svg {
+  transform: rotate(180deg);
+}
+
 .width-dropdown:hover .categories__menu {
   opacity: 1;
   visibility: visible;

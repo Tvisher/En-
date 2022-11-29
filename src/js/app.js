@@ -201,6 +201,7 @@ $(document).ready(function () {
 $("[data-toggle-menu]").on('click', function () {
     if (window.innerWidth > 1380) return;
     $(this).parents('.width-dropdown').find('[data-toggle-content]').slideToggle("slow");
+    $(this).toggleClass('open');
 });
 
 // Календарь
