@@ -14,7 +14,7 @@
 
 
 
-//Инит Fancybox
+// Инициализация Fancybox
 Fancybox.bind("[data-fancybox]", {
     hideScrollbar: false,
     placeFocusBack: false,
@@ -155,9 +155,11 @@ document.addEventListener('click', (e) => {
         const selectedSlider = document.querySelector(`[data-toggle-id="${tatargetBtnId}"]`);
         if (selectedSlider) selectedSlider.classList.add('show');
     }
+    // Закрытие мобильного меню
     if (target.closest('[data-close-mob-menu]')) {
         document.querySelector('[data-mob-menu]').classList.remove('show');
     }
+    // Открытие мобильного меню
     if (target.closest('[data-open-mob-menu]')) {
         document.querySelector('[data-mob-menu]').classList.add('show');
     }
@@ -165,6 +167,7 @@ document.addEventListener('click', (e) => {
 });
 
 $(document).ready(function () {
+    // Селекты с категориями и номерами журналов
     $('.categoryes-filter-select').select2({
         // minimumResultsForSearch: -1,
         selectionCssClass: "dropdown-select",
@@ -181,12 +184,11 @@ $(document).ready(function () {
     $('.categoryes-filter-select').on('select2:select', function (e) {
         $($(this).data('select2').$container).addClass('option-selected')
     });
-
     $('.categoryes-filter-select').one('select2:open', function (e) {
         $('input.select2-search__field').prop('placeholder', 'Поиск');
     });
 
-
+    // Селект для сортировки
     $('.sort-dropdown-select').select2({
         minimumResultsForSearch: -1,
         dropdownAutoWidth: true,
@@ -196,15 +198,18 @@ $(document).ready(function () {
     });
 });
 
-
+// Тоглер рубрик в мобильной версии меню
 $("[data-toggle-menu]").on('click', function () {
     if (window.innerWidth > 1380) return;
     $(this).parents('.width-dropdown').find('[data-toggle-content]').slideToggle("slow");
 });
 
-
+// Календарь 
 const airDatepicker = new AirDatepicker('.datapicker-input', {
     isMobile: true,
     autoClose: true,
     dateFormat: 'dd MMMM yyyy',
+    onSelect({ date, formattedDate, datepicker }) {
+        console.log(date, formattedDate);
+    }
 })

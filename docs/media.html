@@ -604,9 +604,24 @@
 <script>
     // Инит слайдера модального окна
     const photoAlbumsSlider = new Swiper('#photo-albums__slider', {
-        slidesPerView: 3,
+        slidesPerView: 1,
         grid: {
-            rows: 2, fill: 'row',
+            rows: 1,
+            fill: 'row',
+        },
+        breakpoints: {
+            '1280': {
+                slidesPerView: 3,
+                grid: {
+                    rows: 2,
+                },
+            },
+            '680': {
+                grid: {
+                    rows: 2,
+                },
+                slidesPerView: 2,
+            },
         },
         spaceBetween: 40,
         speed: 800,
