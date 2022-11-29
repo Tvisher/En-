@@ -12,7 +12,7 @@
   border-radius: 10px;
   border: 2px solid transparent;
   transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease,
-    border-color 0.3s ease;
+    border-color 0.3s ease, opacity 0.25s ease-in-out;
   svg path {
     transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
   }
