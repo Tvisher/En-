@@ -26,6 +26,14 @@
       height: 100%;
       object-fit: contain;
       margin: auto;
+      path {
+        transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
+      }
+    }
+    &:hover {
+      svg path {
+        fill: $brand-orange;
+      }
     }
   }
   .text-wrap {
@@ -33,8 +41,12 @@
     gap: 40px;
     color: $brand-gray;
     & > a {
+      transition: color 0.2s ease-in-out;
       color: $brand-gray !important;
       text-decoration: none !important;
+      &:hover {
+        color: $brand-black !important;
+      }
     }
     a {
       display: inline;
@@ -53,6 +65,11 @@
   .btn {
     border-color: #d9d9d9;
     color: $brand-black;
+    &:hover {
+      background-color: $brand-orange;
+      color: #fff;
+      border-color: $brand-orange;
+    }
   }
 }
 .footer__start {
