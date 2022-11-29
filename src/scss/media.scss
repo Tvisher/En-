@@ -346,13 +346,7 @@
   .article__table-wrapper {
     overflow: auto;
   }
-  .offset-wraper,
-  .article__large-slider {
-    margin-right: -15px;
-    margin-left: -15px;
-    padding-left: 15px;
-    width: auto;
-  }
+
   .article__large-slider-container .slider-bottom__navigation {
     padding-right: 15px;
   }
@@ -361,6 +355,9 @@
   }
   .article__small-slider .swiper-button-next {
     right: 15px;
+  }
+  .article__table-wrapper {
+    padding-right: 10px;
   }
   .article__table {
     width: 750px;
@@ -372,10 +369,10 @@
     max-width: 438px;
     width: 100%;
   }
-  .atricle__small-wrapper,
-  .article__combo-wrapper {
-    overflow: visible;
-  }
+  // .atricle__small-wrapper,
+  // .article__combo-wrapper {
+  //   overflow: visible;
+  // }
 }
 
 @media (max-width: 1850px) {
@@ -461,6 +458,11 @@
 }
 
 @media (max-width: 1200px) {
+  .article__small-slider,
+  .article__large-slider {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .polls-list .list-item {
     width: 100%;
     padding: 10px 0;
@@ -486,11 +488,23 @@
   .article__small-slider {
     padding-bottom: 50px;
     .swiper-pagination.lines {
+      margin-top: 0;
+      bottom: 18px;
       position: absolute;
     }
   }
+  // .article__combo-wrapper {
+  //   overflow: hidden;
+  // }
+  .atricle__small-wrapper,
   .article__combo-wrapper {
-    overflow: hidden;
+    overflow: visible;
+  }
+  .offset-wraper,
+  .article__large-slider {
+    margin-right: -15px;
+    margin-left: -15px;
+    width: auto;
   }
   .article__combo-wrapper .wide-col {
     width: 100%;
@@ -775,6 +789,13 @@
   }
 }
 @media (max-width: 576px) {
+  .article__table {
+    font-size: 14px;
+  }
+  .article__table th,
+  .article__table td {
+    padding: 10px 0;
+  }
   .categoryes-head__screen .screen__image {
     height: 75vw;
   }
@@ -960,7 +981,7 @@
   .article__large-slider {
     margin-right: -10px;
     margin-left: -10px;
-    padding-left: 10px;
+    // padding-left: 10px;
     width: auto;
   }
   .article__large-slider-container .slider-bottom__navigation {
