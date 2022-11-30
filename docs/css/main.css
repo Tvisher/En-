@@ -4340,11 +4340,17 @@ button {
   margin-top: 40px;
 }
 
-.survey .survey__result-wrap {
+.survey .survey__result-container {
   display: none;
-  height: 4px;
+  align-items: center;
+  gap: 15px;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+.survey .survey__result-wrap {
+  display: block;
+  height: 4px;
   background: #d9d9d9;
   width: 100%;
 }
@@ -4354,8 +4360,8 @@ button {
   height: 100%;
 }
 
-.survey.completed .survey__result-wrap {
-  display: block;
+.survey.completed .survey__result-container {
+  display: flex;
 }
 
 .survey.completed .survey__text::before {

@@ -639,11 +639,16 @@ li {
   .btn {
     margin-top: 40px;
   }
-  .survey__result-wrap {
+  .survey__result-container {
     display: none;
-    height: 4px;
+    align-items: center;
+    gap: 15px;
     margin-top: 20px;
     margin-bottom: 10px;
+  }
+  .survey__result-wrap {
+    display: block;
+    height: 4px;
     background: #d9d9d9;
     width: 100%;
   }
@@ -652,8 +657,8 @@ li {
     height: 100%;
   }
   &.completed {
-    .survey__result-wrap {
-      display: block;
+    .survey__result-container {
+      display: flex;
     }
     .survey__text::before {
       display: none;
@@ -666,9 +671,6 @@ li {
       &::before {
         display: none;
       }
-      // &:hover {
-      //   background: transparent;
-      // }
     }
     .btn {
       display: none;
