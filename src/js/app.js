@@ -13,7 +13,6 @@
 })();
 
 
-
 //Инит Fancybox
 Fancybox.bind("[data-fancybox]", {
     hideScrollbar: false,
