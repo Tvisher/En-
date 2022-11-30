@@ -198,7 +198,7 @@ $(document).ready(function () {
 
 // Тоглер для рубрик в мобильном меню
 $("[data-toggle-menu]").on('click', function () {
-    if (window.innerWidth > 1380) return;
+    if (window.innerWidth > 1300) return;
     $(this).parents('.width-dropdown').find('[data-toggle-content]').slideToggle("slow");
     $(this).toggleClass('open');
 });
