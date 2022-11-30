@@ -207,11 +207,14 @@ $("[data-toggle-menu]").on('click', function () {
 const airDatepicker = new AirDatepicker('.datapicker-input', {
     isMobile: true,
     autoClose: true,
-    dateFormat: 'dd MMMM yyyy',
+    dateFormat: 'dd.MM.yyyy',
+    range: true,
+    multipleDatesSeparator: ' - ',
     //Событие выбора даты в календаре
     onSelect({ date, formattedDate, datepicker }) {
-        console.log({
-            date, formattedDate, datepicker
-        });
+        //Сработает при выборе второй латы
+        if (formattedDate.length > 1) {
+            console.log(formattedDate);
+        }
     }
 })
