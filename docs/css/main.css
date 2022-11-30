@@ -7686,7 +7686,10 @@ button {
   }
 
   .members-list .list-item__image::before,
-  .members-list .list-item__btn,
+  .members-list .list-item__btn {
+    display: none;
+  }
+
   .contests-list .list-item__descr,
   .slide-hover,
   .event-block__image::before,
@@ -8078,8 +8081,27 @@ button {
   }
 
   .search-field input {
-    font-size: 14px;
     padding-left: 30px;
+  }
+
+  .search-field input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 14px;
+  }
+
+  .search-field input::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 14px;
+  }
+
+  .search-field input:-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 14px;
+  }
+
+  .search-field input:-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 14px;
   }
 
   .search-field::before {
