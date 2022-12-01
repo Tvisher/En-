@@ -7359,9 +7359,15 @@ button {
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
   .slider-section__wrapper {
     padding-top: 20px;
+  }
+}
+
+@media (max-width: 1500px) {
+  body {
+    font-size: 14px;
   }
 
   .nav-menu__link {
@@ -7457,10 +7463,6 @@ button {
 }
 
 @media (max-width: 1380px) {
-  body {
-    font-size: 14px;
-  }
-
   .narrow-col__container .survey__title {
     font-size: 1em;
     margin-bottom: 20px;
