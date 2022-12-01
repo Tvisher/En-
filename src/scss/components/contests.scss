@@ -91,7 +91,8 @@
     }
   }
   .show-counter {
-    font-size: 12px;
+    // font-size: 12px;
+    font-size: 0.75em;
     padding: 4px 10px;
     border-radius: 10px;
     width: fit-content;
@@ -100,7 +101,8 @@
   }
   .list-item__name {
     font-weight: 700;
-    font-size: 18px;
+    // font-size: 18px;
+    font-size: 1.12em;
     color: #fff;
   }
   .list-item__descr {
@@ -165,24 +167,28 @@
     padding: 12px 20px;
     border-radius: 10px;
     font-weight: 500;
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: 1em;
     display: flex;
     gap: 10px;
     .num {
-      font-size: 32px;
+      // font-size: 32px;
+      font-size: 2em;
     }
   }
 }
 .contest-nameplate {
   margin-bottom: 10px;
   font-weight: 500;
-  font-size: 14px;
+  // font-size: 14px;
+  font-size: 0.87em;
   color: $brand-gray;
 }
 .contest__title {
   position: relative;
   font-weight: 700;
-  font-size: 28px;
+  // font-size: 28px;
+  font-size: 1.75em;
   margin-bottom: 40px;
 }
 
@@ -203,11 +209,13 @@
   }
   .auth__name {
     font-weight: 500;
-    font-size: 18px;
+    // font-size: 18px;
+    font-size: 1.12em;
   }
   .auth__from {
     font-weight: 500;
-    font-size: 14px;
+    // font-size: 14px;
+    font-size: 0.87em;
     color: #8a8a8a;
   }
 }
@@ -224,7 +232,8 @@
   padding: 19px 30px;
   border: 2px solid rgba(247, 147, 29, 0.7);
   border-radius: 10px;
-  font-size: 18px;
+  // font-size: 18px;
+  font-size: 0.87em;
   color: $brand-orange;
 }
 

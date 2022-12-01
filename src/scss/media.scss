@@ -1,6 +1,7 @@
 @media (max-width: 1700px) {
   .nav-menu__link {
-    font-size: 20px;
+    // font-size: 20px;
+    font-size: 1.25em;
   }
   .header__logo {
     width: 380px;
@@ -14,7 +15,8 @@
     padding-top: 20px;
   }
   .nav-menu__link {
-    font-size: 18px;
+    // font-size: 18px;
+    font-size: 1.12em;
   }
   .header__nav-menu {
     gap: 20px;
@@ -32,13 +34,18 @@
 }
 
 @media (max-width: 1380px) {
+  body {
+    font-size: 14px;
+  }
   .narrow-col__container {
     .survey__title {
-      font-size: 16px;
+      // font-size: 16px;
+      font-size: 1em;
       margin-bottom: 20px;
     }
     .survey .survey__text {
-      font-size: 14px;
+      // font-size: 14px;
+      font-size: 0.87em;
     }
     .survey__item {
       margin-bottom: 10px;
@@ -153,7 +160,8 @@
     align-items: flex-start;
   }
   .main-slider .slide-item__title {
-    font-size: 32px;
+    // font-size: 32px;
+    font-size: 2em;
     line-height: 140%;
   }
 }
@@ -225,7 +233,8 @@
     top: 10px;
   }
   .main-slider .slide-item__descr {
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: 1em;
   }
   .news-section .swiper-button-prev,
   .news-section .swiper-button-next {
@@ -244,7 +253,8 @@
     bottom: inherit;
     left: 10px;
     top: 10px;
-    font-size: 14px;
+    // font-size: 14px;
+    font-size: 0.87em;
   }
 }
 @media (max-width: 768px) {
@@ -277,7 +287,8 @@
     height: 50vh;
   }
   .modal-slider__footer .contest__title {
-    font-size: 24px;
+    // font-size: 24px;
+    font-size: 1.5em;
   }
   .slider__footer-wrapper {
     flex-direction: column;
@@ -303,7 +314,8 @@
     gap: 10px;
   }
   .members-list .auth__name {
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: 1em;
   }
   .categoryes-body__list {
     margin-right: 0;
@@ -318,7 +330,8 @@
     padding-bottom: 40px;
   }
   .article-tilte {
-    font-size: 24px;
+    // font-size: 24px;
+    font-size: 1.5em;
     margin-bottom: 15px;
   }
   .article-descr {
@@ -429,11 +442,13 @@
 
 @media (max-width: 1500px) {
   .inclined-block__content .inclined-block__tile {
-    font-size: 22px;
+    // font-size: 22px;
+    font-size: 1.37em;
     margin-bottom: 30px;
   }
   .inclined-block__content .inclined-block__text {
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: 1em;
   }
   .inclined-block__content .inclined-block__footer {
     width: 100%;
@@ -608,6 +623,9 @@
 }
 
 @media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
   .categoryes-head {
     padding: 20px 0;
   }
@@ -622,7 +640,8 @@
     height: 50vw;
   }
   .categoryes-head__screen .screen__content .screen__title {
-    font-size: 32px;
+    // font-size: 32px;
+    font-size: 2em;
   }
   .winner-item {
     flex-direction: column;
@@ -705,7 +724,8 @@
     padding-top: 0;
   }
   .toggle-btns-wrapper .toggle__btn {
-    font-size: 18px;
+    // font-size: 18px;
+    font-size: 1.12em;
     padding-left: 0;
     padding-right: 0;
   }
@@ -733,7 +753,8 @@
     padding: 10px;
   }
   .category-nameplane {
-    font-size: 12px;
+    // font-size: 12px;
+    font-size: 0.75em;
   }
   .hash-filter-list {
     gap: 5px;
@@ -770,7 +791,8 @@
     background-size: contain;
   }
   .large-title {
-    font-size: 32px;
+    // font-size: 32px;
+    font-size: 2em;
     margin-bottom: 20px;
   }
   .footer__end .text-wrap {
@@ -782,14 +804,16 @@
     align-items: center;
   }
   .section-title.small {
-    font-size: 24px;
+    // font-size: 24px;
+    font-size: 1.5em;
   }
   .title-wrapper {
     width: 100%;
     justify-content: space-between;
   }
   .section-title {
-    font-size: 28px;
+    // font-size: 28px;
+    font-size: 1.75em;
   }
   .industry-events .title-wrapper .section-title:before {
     display: none;
@@ -800,15 +824,18 @@
   .section-surveys .title-wrapper {
     margin-bottom: 20px;
   }
-  .survey__text {
-    font-size: 16px;
+  .survey__text,
+  .survey .precent-value {
+    // font-size: 16px;
+    font-size: 0.75em;
   }
   .survey__item {
     margin-bottom: 5px;
   }
   .survey__wrapper {
     .survey__title {
-      font-size: 18px;
+      // font-size: 18px;
+      font-size: 1.12em;
       margin-bottom: 20px;
     }
   }
@@ -823,10 +850,14 @@
     width: 100%;
     border-radius: 10px 10px 0 0;
   }
+  .survey .survey__result-container {
+    margin-top: 5px;
+  }
 }
 @media (max-width: 576px) {
   .article__table {
-    font-size: 14px;
+    // font-size: 14px;
+    font-size: 0.87em;
   }
   .article__table th,
   .article__table td {
@@ -836,13 +867,15 @@
     height: 75vw;
   }
   .categoryes-head__screen .screen__content .screen__title {
-    font-size: 28px;
+    // font-size: 28px;
+    font-size: 1.75em;
   }
   .categoryes-head {
     padding-top: 0;
   }
   .back-orange-link {
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: 1em;
   }
   .polls-list .survey__item {
     margin-left: -10px;
@@ -858,7 +891,8 @@
     gap: 15px;
   }
   .contest__title {
-    font-size: 22px;
+    // font-size: 22px;
+    font-size: 1.37em;
   }
   .contest-nameplate {
     margin-bottom: 0;
@@ -899,7 +933,8 @@
     min-height: inherit;
   }
   .main-slider .category-nameplane {
-    font-size: 12px;
+    // font-size: 12px;
+    font-size: 0.75em;
     margin-bottom: 0;
   }
   .main-slider .slide-item__iamge {
@@ -917,11 +952,13 @@
     }
   }
   .main-slider .slide-item__title {
-    font-size: 28px;
+    // font-size: 28px;
+    font-size: 1.75em;
     margin-bottom: 10px;
   }
   .main-slider .slide-item__descr {
-    font-size: 14px;
+    // font-size: 14px;
+    font-size: 0.87em;
   }
   .main-slider .slide-item__content {
     .btn {
@@ -972,7 +1009,8 @@
 
 @media (max-width: 440px) {
   .large-title {
-    font-size: 28px;
+    // font-size: 28px;
+    font-size: 1.75em;
   }
   .mobile-close-btn {
     width: 25px;
