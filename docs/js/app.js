@@ -74,7 +74,6 @@ const mediaSlider = new Swiper('.media-section__slider', {
 const archiveSlider = new Swiper('.archive-section__slider', {
     slidesPerView: 'auto',
     speed: 1000,
-    noSwipingClass: 'noSwiping',
     slidesOffsetAfter: 240,
     navigation: {
         nextEl: '.swiper-button-next.btn-archive',
@@ -86,20 +85,10 @@ const archiveSlider = new Swiper('.archive-section__slider', {
     },
     on: {
         transitionStart(slider) {
-            // slider.allowSlideNext = false;
-            // slider.allowSlidePrev = false;
-            // slider.el.classList.add('noSwiping');
             setTimeout(() => {
                 slider.updateSlides();
                 slider.slideTo(slider.realIndex, 600);
             }, 400);
-        },
-        transitionEnd(slider) {
-            setTimeout(() => {
-                // slider.allowSlideNext = true;
-                // slider.allowSlidePrev = true;
-                // slider.el.classList.remove('noSwiping');
-            }, 10);
         },
         resize(slider) {
             slider.updateSlides();
@@ -212,7 +201,7 @@ const airDatepicker = new AirDatepicker('.datapicker-input', {
     multipleDatesSeparator: ' - ',
     //Событие выбора даты в календаре
     onSelect({ date, formattedDate, datepicker }) {
-        //Сработает при выборе второй латы
+        //Сработает при выборе второй даты
         if (formattedDate.length > 1) {
             console.log(formattedDate);
         }
