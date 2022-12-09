@@ -147,9 +147,27 @@
 }
 
 @media (max-width: 680px) {
+  .modal {
+    padding: 15px;
+    padding-top: 30px;
+    align-items: flex-start;
+    .modal__content__head {
+      font-size: 22px;
+    }
+  }
+  .modal .modal__content-form {
+    padding: 20px;
+  }
   .header__logo {
     width: 100%;
     flex-shrink: inherit;
+  }
+  .modal .modal__content {
+    margin: 0;
+  }
+  .modal .form-label input,
+  .modal .form-label textarea {
+    padding: 15px;
   }
 }
 

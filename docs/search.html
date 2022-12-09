@@ -12,11 +12,11 @@
     <link rel="preload" href="./fonts/Formular-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Formular-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Formular-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.min.css?_v=20221208225617">
+    <link rel="stylesheet" href="./css/main.min.css?_v=20221209112237">
     <script> </script>
-    <script src="./js/jquery.min.js?_v=20221208225617"></script>
-    <script src="./js/select2.min.js?_v=20221208225617"></script>
-    <script src="./js/swiper-bundle.min.js?_v=20221208225617"></script>
+    <script src="./js/jquery.min.js?_v=20221209112237"></script>
+    <script src="./js/select2.min.js?_v=20221209112237"></script>
+    <script src="./js/swiper-bundle.min.js?_v=20221209112237"></script>
 
 </head>
 
@@ -643,7 +643,7 @@
     <div class="container">
         <div class="footer__wrapper">
             <div class="footer__start">
-                <a href="#" class="btn">Связаться с редакцией</a>
+                <a href="#" class="btn" data-show-modal-form>Связаться с редакцией</a>
                 <div class="socials">
                     <a href="#" class="socials__item youtube-ico">
                         <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -680,10 +680,32 @@
         </div>
     </div>
 </footer>
+<div class="modal" data-modal-form>
+    <div class="modal__content">
+        <div class="modal__content__head">
+            <span>Связаться с редакцией</span>
+            <button class="close-modal" onclick="this.closest('.show').classList.remove('show')"></button>
+        </div>
+        <form action="#" class="modal__content-form">
+            <label class="form-label">
+                <input type="text" placeholder="Имя">
+            </label>
+
+            <label class="form-label">
+                <input type="email" placeholder="E-mail">
+            </label>
+
+            <label class="form-label">
+                <textarea placeholder="Текст сообщения"></textarea>
+            </label>
+            <button type="submit" class="btn fill-orange">Отправить сообщение</button>
+        </form>
+    </div>
+</div>
 </body>
 
-<script src="./js/fancybox.umd.js?_v=20221208225617"></script>
-<script src="./js/air-datepicker.js?_v=20221208225617"></script>
-<script src="./js/app.js?_v=20221208225617"></script>
+<script src="./js/fancybox.umd.js?_v=20221209112237"></script>
+<script src="./js/air-datepicker.js?_v=20221209112237"></script>
+<script src="./js/app.js?_v=20221209112237"></script>
 
 </html>

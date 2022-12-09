@@ -7275,6 +7275,109 @@ button {
   overflow: hidden;
 }
 
+.sort-dropdown .sort-dropdown-select-wrapper.reverse .select2-selection__arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  z-index: 99;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(32, 32, 32, 0.8);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 30px;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal .modal__content {
+  max-width: 620px;
+  width: 100%;
+  margin: auto;
+}
+
+.modal .modal__content-form {
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.modal .modal__content__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 160%;
+  color: #fff;
+}
+
+.modal .close-modal {
+  flex-shrink: 0;
+}
+
+.modal .btn {
+  padding: 20px;
+  width: 100%;
+}
+
+.modal .form-label {
+  margin-bottom: 30px;
+}
+
+.modal .form-label input,
+.modal .form-label textarea {
+  resize: none;
+  font-weight: 500;
+  font-size: 18px;
+  color: #202020;
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border: 2px solid #d9d9d9;
+  border-radius: 10px;
+}
+
+.modal .form-label input::-moz-placeholder, .modal .form-label textarea::-moz-placeholder {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 160%;
+  color: #8a8a8a;
+}
+
+.modal .form-label input::placeholder,
+.modal .form-label textarea::placeholder {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 160%;
+  color: #8a8a8a;
+}
+
+.modal .form-label input:focus,
+.modal .form-label textarea:focus {
+  border-color: rgba(247, 147, 29, 0.6);
+}
+
+.modal .form-label textarea {
+  height: 260px;
+}
+
 @media all and (min-width: 1024px) {
   .fancybox__container {
     --carousel-button-width: 48px;
@@ -8132,9 +8235,32 @@ button {
 }
 
 @media (max-width: 680px) {
+  .modal {
+    padding: 15px;
+    padding-top: 30px;
+    align-items: flex-start;
+  }
+
+  .modal .modal__content__head {
+    font-size: 22px;
+  }
+
+  .modal .modal__content-form {
+    padding: 20px;
+  }
+
   .header__logo {
     width: 100%;
     flex-shrink: inherit;
+  }
+
+  .modal .modal__content {
+    margin: 0;
+  }
+
+  .modal .form-label input,
+  .modal .form-label textarea {
+    padding: 15px;
   }
 
   .winners-list {

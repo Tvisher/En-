@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer__wrapper">
             <div class="footer__start">
-                <a href="#" class="btn">Связаться с редакцией</a>
+                <a href="#" class="btn" data-show-modal-form>Связаться с редакцией</a>
                 <div class="socials">
                     <a href="#" class="socials__item youtube-ico">
                         <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,6 +39,28 @@
         </div>
     </div>
 </footer>
+<div class="modal" data-modal-form>
+    <div class="modal__content">
+        <div class="modal__content__head">
+            <span>Связаться с редакцией</span>
+            <button class="close-modal" onclick="this.closest('.show').classList.remove('show')"></button>
+        </div>
+        <form action="#" class="modal__content-form">
+            <label class="form-label">
+                <input type="text" placeholder="Имя">
+            </label>
+
+            <label class="form-label">
+                <input type="email" placeholder="E-mail">
+            </label>
+
+            <label class="form-label">
+                <textarea placeholder="Текст сообщения"></textarea>
+            </label>
+            <button type="submit" class="btn fill-orange">Отправить сообщение</button>
+        </form>
+    </div>
+</div>
 </body>
 
 <script src="./js/fancybox.umd.js"></script>

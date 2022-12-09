@@ -177,11 +177,18 @@ document.addEventListener('click', (e) => {
         const selectedTab = document.querySelector(`[data-toggle-id="${tatargetBtnId}"]`);
         if (selectedTab) selectedTab.classList.add('show');
     }
+
     if (target.closest('[data-close-mob-menu]')) {
         document.querySelector('[data-mob-menu]').classList.remove('show');
     }
     if (target.closest('[data-open-mob-menu]')) {
         document.querySelector('[data-mob-menu]').classList.add('show');
+    }
+
+    // Открытие модалки с формой 
+    if (target.closest('[data-show-modal-form]')) {
+        e.preventDefault();
+        document.querySelector('[data-modal-form]').classList.add('show');
     }
 
 });
@@ -210,14 +217,27 @@ $(document).ready(function () {
     });
 
     // Выпадающий список для сортировки
-    $('.sort-dropdown-select').select2({
+    const select = $('.sort-dropdown-select').select2({
         minimumResultsForSearch: -1,
         dropdownAutoWidth: true,
         selectionCssClass: "sort-dropdown-select-wrapper",
         dropdownCssClass: "sort-dropdown-select-result",
         dropdownParent: $('.sort-dropdown'),
     });
+
+    // Ловим событие закрытия
+    select.on('select2:close', function (e) {
+        if (e.params.hasOwnProperty('originalEvent') && e.params.originalEvent === undefined) return;
+        if (!e.params.hasOwnProperty('originalEvent')) {
+            //Если выбрали уже выбранный элемент !!!
+            $(this).parents('.sort-dropdown').find('.sort-dropdown-select-wrapper').toggleClass('reverse');
+        } else {
+            $(this).parents('.sort-dropdown').find('.sort-dropdown-select-wrapper').removeClass('reverse');
+        }
+    });
 });
+
+
 
 // Тоглер для рубрик в мобильном меню
 $("[data-toggle-menu]").on('click', function () {
