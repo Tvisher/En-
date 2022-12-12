@@ -5799,7 +5799,6 @@ button {
   font-weight: 400;
   font-size: 1em;
   line-height: 160%;
-  margin-bottom: 60px;
 }
 
 .wide-container p {
@@ -5997,7 +5996,7 @@ button {
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  max-height: 400px;
+  height: 400px;
   margin-bottom: 10px;
 }
 
@@ -6100,7 +6099,6 @@ button {
 
 .article__footer {
   margin-top: 15px;
-  padding-bottom: 20px;
   gap: 20px;
   display: flex;
   align-items: center;
@@ -6154,7 +6152,7 @@ button {
 
 .article__wrapper {
   border-bottom: 2px solid #d9d9d9;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 .article__body {
@@ -7625,6 +7623,10 @@ button {
 }
 
 @media (max-width: 1300px) {
+  .wide-container p {
+    padding-left: 0;
+  }
+
   .header__logo {
     max-width: 300px;
   }
@@ -7724,6 +7726,18 @@ button {
 }
 
 @media (max-width: 1200px) {
+  .narrow-col {
+    display: none;
+  }
+
+  .wide-container {
+    padding-right: 0;
+  }
+
+  .article__video-container {
+    margin-left: 0;
+  }
+
   .article__small-slider,
   .article__large-slider {
     padding-left: 15px;
@@ -7879,6 +7893,13 @@ button {
 @media (max-width: 1024px) {
   body {
     font-size: 16px;
+  }
+
+  .img-ban-container,
+  .article__small-slider-container,
+  .article__table-wrapper,
+  .article__video-container {
+    margin: 40px 0;
   }
 
   .categoryes-head {
@@ -8075,8 +8096,11 @@ button {
 }
 
 @media (max-width: 768px) {
-  .article__small-slider-container {
-    margin-bottom: 30px;
+  .img-ban-container,
+  .article__small-slider-container,
+  .article__table-wrapper,
+  .article__video-container {
+    margin: 30px 0;
   }
 
   .polls-list .survey {
@@ -8180,12 +8204,6 @@ button {
     width: 100%;
   }
 
-  .wide-container,
-  .article__video-container,
-  .img-ban-container {
-    margin-bottom: 30px;
-  }
-
   .border-container,
   .article__large-slider-container {
     margin-top: 30px;
@@ -8277,6 +8295,10 @@ button {
   .modal .form-label input,
   .modal .form-label textarea {
     padding: 15px;
+  }
+
+  .article__wrapper {
+    padding-bottom: 30px;
   }
 
   .winners-list {
@@ -8449,6 +8471,10 @@ button {
 }
 
 @media (max-width: 576px) {
+  .video-container-image {
+    height: 70vw;
+  }
+
   .article__table {
     font-size: 0.87em;
   }

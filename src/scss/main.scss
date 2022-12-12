@@ -1968,7 +1968,7 @@ li {
   // font-size: 16px;
   font-size: 1em;
   line-height: 160%;
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
   p {
     padding-left: 21%;
   }
@@ -2145,7 +2145,7 @@ li {
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  max-height: 400px;
+  height: 400px;
   margin-bottom: 10px;
   img {
     width: 100%;
@@ -2238,7 +2238,7 @@ li {
 
 .article__footer {
   margin-top: 15px;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
   gap: 20px;
   display: flex;
   align-items: center;
@@ -2290,7 +2290,7 @@ li {
 
 .article__wrapper {
   border-bottom: 2px solid #d9d9d9;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 .article__body {

@@ -61,6 +61,9 @@
 }
 
 @media (max-width: 1300px) {
+  .wide-container p {
+    padding-left: 0;
+  }
   .header__logo {
     max-width: 300px;
   }
@@ -280,9 +283,13 @@
   }
 }
 @media (max-width: 768px) {
-  .article__small-slider-container {
-    margin-bottom: 30px;
+  .img-ban-container,
+  .article__small-slider-container,
+  .article__table-wrapper,
+  .article__video-container {
+    margin: 30px 0;
   }
+
   .polls-list .survey {
     padding: 20px;
   }
@@ -365,11 +372,7 @@
   .article__combo-wrapper .date-block {
     width: 100%;
   }
-  .wide-container,
-  .article__video-container,
-  .img-ban-container {
-    margin-bottom: 30px;
-  }
+
   .border-container,
   .article__large-slider-container {
     margin-top: 30px;
@@ -513,6 +516,15 @@
 }
 
 @media (max-width: 1200px) {
+  .narrow-col {
+    display: none;
+  }
+  .wide-container {
+    padding-right: 0;
+  }
+  .article__video-container {
+    margin-left: 0;
+  }
   .article__small-slider,
   .article__large-slider {
     padding-left: 15px;
@@ -648,6 +660,12 @@
   body {
     font-size: 16px;
   }
+  .img-ban-container,
+  .article__small-slider-container,
+  .article__table-wrapper,
+  .article__video-container {
+    margin: 40px 0;
+  }
   .categoryes-head {
     padding: 20px 0;
   }
@@ -739,6 +757,9 @@
 }
 
 @media (max-width: 680px) {
+  .article__wrapper {
+    padding-bottom: 30px;
+  }
   .winners-list {
     padding-top: 20px;
   }
@@ -877,6 +898,9 @@
   }
 }
 @media (max-width: 576px) {
+  .video-container-image {
+    height: 70vw;
+  }
   .article__table {
     // font-size: 14px;
     font-size: 0.87em;
