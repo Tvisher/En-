@@ -71,7 +71,6 @@ const mediaSlider = new Swiper('.media-section__slider', {
 });
 
 
-let archiveAjaxUrl = `https://dev6.ml-digital.ru/ajax/archive.php?PAGEN_1=`;
 
 // Слайдеры секции Archive на главной странице
 const archiveSlider = new Swiper('.archive-section__slider', {
@@ -88,6 +87,7 @@ const archiveSlider = new Swiper('.archive-section__slider', {
     },
     on: {
         init(slider) {
+            slider.archiveAjaxUrl = `https://dev6.ml-digital.ru/ajax/archive.php?PAGEN_1=`;
             slider.ajaxPageCounter = slider.el.getAttribute('data-page-count');
             slider.ajaxPageStart = 2;
         },
@@ -98,20 +98,19 @@ const archiveSlider = new Swiper('.archive-section__slider', {
             }, 400);
         },
         activeIndexChange(slider) {
-
-            const pageUrl = `${archiveAjaxUrl}${slider.ajaxPageStart}`;
-
+            console.log(window.location.host);
+            const slidesUrl = `${slider.archiveAjaxUrl}${slider.ajaxPageStart}`;
             if (slider.progress > 0.85 && slider.ajaxPageCounter > 0) {
-                fetch(pageUrl, {})
+                fetch(slidesUrl, {})
                     .then((response) => {
                         return response.text();
                     })
                     .then((data) => {
                         slider.appendSlide(data);
-                        slider.ajaxPageCounter--;
-                        slider.ajaxPageStart++;
                         slider.updateSlides();
                         slider.updateSize();
+                        slider.ajaxPageCounter--;
+                        slider.ajaxPageStart++;
                     });
             }
         },
