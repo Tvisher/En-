@@ -70,6 +70,9 @@ const mediaSlider = new Swiper('.media-section__slider', {
     },
 });
 
+
+let archiveAjaxUrl = `https://dev6.ml-digital.ru/ajax/archive.php?PAGEN_1=`;
+
 // Слайдеры секции Archive на главной странице
 const archiveSlider = new Swiper('.archive-section__slider', {
     slidesPerView: 'auto',
@@ -84,44 +87,32 @@ const archiveSlider = new Swiper('.archive-section__slider', {
         draggable: true,
     },
     on: {
+        init(slider) {
+            slider.ajaxPageCounter = slider.el.getAttribute('data-page-count');
+            slider.ajaxPageStart = 2;
+        },
         transitionStart(slider) {
             setTimeout(() => {
                 slider.updateSlides();
                 slider.slideTo(slider.realIndex, 600);
             }, 400);
         },
-        progress(slider, progress) {
-            // Если до конца осталось 25%
-            if (progress > 0.85) {
-                // Тут сделать ajax, получить responce в виде массива с вёрсткой и добавить методом appendSlide в слайдер
-                // После добавления вызвать slider.updateSlides()  и  slider.updateSize();
-                const responce = [
-                    `<div class="archive-section__slide slide-item swiper-slide">
-                        <a class="slide-item__link" href="#">
-                            <div class="slide-item__image">
-                                <img src="@img/archive-ilage-1.jpg" alt="">
-                                <div class="slide-item__before">
-                                    <span class="btn">Читать</span>
-                                </div>
-                            </div>
-                            <div class="slide-item__text">№ 37 (180) Сентябрь 2022</div>
-                        </a>
-                    </div>`,
-                    `<div class="archive-section__slide slide-item swiper-slide">
-                        <a class="slide-item__link" href="#">
-                            <div class="slide-item__image">
-                                <img src="@img/archive-ilage-1.jpg" alt="">
-                                <div class="slide-item__before">
-                                    <span class="btn">Читать</span>
-                                </div>
-                            </div>
-                            <div class="slide-item__text">№ 37 (180) Сентябрь 2022</div>
-                        </a>
-                    </div>`
-                ];
-                slider.appendSlide(responce);
-                slider.updateSlides();
-                slider.updateSize();
+        activeIndexChange(slider) {
+
+            const pageUrl = `${archiveAjaxUrl}${slider.ajaxPageStart}`;
+
+            if (slider.progress > 0.85 && slider.ajaxPageCounter > 0) {
+                fetch(pageUrl, {})
+                    .then((response) => {
+                        return response.text();
+                    })
+                    .then((data) => {
+                        slider.appendSlide(data);
+                        slider.ajaxPageCounter--;
+                        slider.ajaxPageStart++;
+                        slider.updateSlides();
+                        slider.updateSize();
+                    });
             }
         },
         resize(slider) {
