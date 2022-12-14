@@ -89,7 +89,7 @@ const archiveSlider = new Swiper('.archive-section__slider', {
         init(slider) {
             // Url для запроса
             let location = window.location
-            slider.archiveAjaxUrl = `${location.host + location.pathname + location.hash}ajax/archive.php?PAGEN_1=`;
+            slider.archiveAjaxUrl = `${location.protocol}//${location.host}${location.pathname}${location.hash}ajax/archive.php?PAGEN_1=`;
             console.log(slider.archiveAjaxUrl);
             // Счётчик запросов из дата атпибута
             slider.ajaxPageCounter = slider.el.getAttribute('data-page-count');
