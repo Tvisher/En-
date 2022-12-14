@@ -99,26 +99,24 @@ const archiveSlider = new Swiper('.archive-section__slider', {
         transitionStart(slider) {
             setTimeout(() => {
                 slider.updateSlides();
-                slider.slideTo(slider.realIndex);
-            }, 220);
+                slider.slideTo(slider.realIndex, 210);
+                if (slider.progress > 0.60 && slider.ajaxPageCounter > 0) {
+                    const slidesUrl = `${slider.archiveAjaxUrl}${slider.ajaxPageStart}`;
+                    fetch(slidesUrl, {})
+                        .then((response) => {
+                            return response.text();
+                        })
+                        .then((data) => {
+                            slider.appendSlide(data);
+                            slider.ajaxPageCounter--;
+                            slider.ajaxPageStart++;
+                        });
+                }
+            }, 210);
+
+
         },
-        activeIndexChange(slider) {
-            // Формируем URL
-            if (slider.progress > 0.85 && slider.ajaxPageCounter > 0) {
-                const slidesUrl = `${slider.archiveAjaxUrl}${slider.ajaxPageStart}`;
-                fetch(slidesUrl, {})
-                    .then((response) => {
-                        return response.text();
-                    })
-                    .then((data) => {
-                        slider.appendSlide(data);
-                        slider.updateSlides();
-                        slider.updateSize();
-                        slider.ajaxPageCounter--;
-                        slider.ajaxPageStart++;
-                    });
-            }
-        },
+
         resize(slider) {
             slider.updateSlides();
             slider.updateSize();
