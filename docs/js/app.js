@@ -87,8 +87,13 @@ const archiveSlider = new Swiper('.archive-section__slider', {
     },
     on: {
         init(slider) {
-            slider.archiveAjaxUrl = `https://dev6.ml-digital.ru/ajax/archive.php?PAGEN_1=`;
+            // Url для запроса
+            let location = window.location
+            slider.archiveAjaxUrl = `${location.host + location.pathname + location.hash}ajax/archive.php?PAGEN_1=`;
+            console.log(slider.archiveAjaxUrl);
+            // Счётчик запросов из дата атпибута
             slider.ajaxPageCounter = slider.el.getAttribute('data-page-count');
+            // Начальное значение для запроса
             slider.ajaxPageStart = 2;
         },
         transitionStart(slider) {
@@ -98,10 +103,12 @@ const archiveSlider = new Swiper('.archive-section__slider', {
             }, 400);
         },
         activeIndexChange(slider) {
-            console.log(window.location.host);
-            const slidesUrl = `${slider.archiveAjaxUrl}${slider.ajaxPageStart}`;
+            // Формируем URL
             if (slider.progress > 0.85 && slider.ajaxPageCounter > 0) {
-                fetch(slidesUrl, {})
+                const slidesUrl = `${slider.archiveAjaxUrl}${slider.ajaxPageStart}`;
+                fetch(slidesUrl, {
+                    mode: "no-cors",
+                })
                     .then((response) => {
                         return response.text();
                     })
