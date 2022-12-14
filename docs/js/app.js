@@ -75,7 +75,7 @@ const mediaSlider = new Swiper('.media-section__slider', {
 // Слайдеры секции Archive на главной странице
 const archiveSlider = new Swiper('.archive-section__slider', {
     slidesPerView: 'auto',
-    speed: 1000,
+    speed: 600,
     slidesOffsetAfter: 240,
     navigation: {
         nextEl: '.swiper-button-next.btn-archive',
@@ -99,16 +99,14 @@ const archiveSlider = new Swiper('.archive-section__slider', {
         transitionStart(slider) {
             setTimeout(() => {
                 slider.updateSlides();
-                slider.slideTo(slider.realIndex, 600);
-            }, 400);
+                slider.slideTo(slider.realIndex);
+            }, 220);
         },
         activeIndexChange(slider) {
             // Формируем URL
             if (slider.progress > 0.85 && slider.ajaxPageCounter > 0) {
                 const slidesUrl = `${slider.archiveAjaxUrl}${slider.ajaxPageStart}`;
-                fetch(slidesUrl, {
-                    mode: "no-cors",
-                })
+                fetch(slidesUrl, {})
                     .then((response) => {
                         return response.text();
                     })

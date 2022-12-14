@@ -1223,7 +1223,7 @@ li {
   margin-right: 40px;
   width: 240px;
   height: 560px;
-  transition: width 0.35s ease-in-out;
+  transition: width 0.2s ease-in-out;
   .slide-item__link:hover {
     .slide-item__before {
       opacity: 1;
@@ -1232,7 +1232,7 @@ li {
   padding-bottom: 30px;
 
   .slide-item__image {
-    transition: height 0.35s ease-in-out;
+    transition: height 0.2s ease-in-out;
     margin-bottom: 10px;
     height: 350px;
     width: 100%;

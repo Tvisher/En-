@@ -4996,7 +4996,7 @@ button {
   margin-right: 40px;
   width: 240px;
   height: 560px;
-  transition: width 0.35s ease-in-out;
+  transition: width 0.2s ease-in-out;
   padding-bottom: 30px;
 }
 
@@ -5005,7 +5005,7 @@ button {
 }
 
 .archive-section__slide .slide-item__image {
-  transition: height 0.35s ease-in-out;
+  transition: height 0.2s ease-in-out;
   margin-bottom: 10px;
   height: 350px;
   width: 100%;
