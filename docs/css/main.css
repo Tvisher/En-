@@ -5047,6 +5047,12 @@ button {
   color: #ffffff;
 }
 
+.archive-section__slide .slide-item__before .btn:hover {
+  color: #fff;
+  background-color: #f7931d;
+  border-color: #f7931d;
+}
+
 .archive-section__slide .slide-item__text {
   font-weight: 500;
   font-size: 1em;
