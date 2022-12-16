@@ -77,6 +77,7 @@ const archiveSlider = new Swiper('.archive-section__slider', {
     slidesPerView: 'auto',
     speed: 600,
     slidesOffsetAfter: 240,
+    slideToClickedSlide: true,
     navigation: {
         nextEl: '.swiper-button-next.btn-archive',
         prevEl: '.swiper-button-prev.btn-archive',
