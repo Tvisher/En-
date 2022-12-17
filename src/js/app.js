@@ -225,6 +225,8 @@ $(document).ready(function () {
         if (!e.params.hasOwnProperty('originalEvent')) {
             //Если выбрали уже выбранный элемент !!!
             $(this).parents('.sort-dropdown').find('.sort-dropdown-select-wrapper').toggleClass('reverse');
+            const selectedValue = e.target.value;
+            console.log(selectedValue);
         } else {
             $(this).parents('.sort-dropdown').find('.sort-dropdown-select-wrapper').removeClass('reverse');
         }
